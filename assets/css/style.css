@@ -713,6 +713,8 @@ html.js [data-reveal-delay="4"]{transition-delay:.32s}
 .header--over-hero:not(.is-scrolled) .brand__logo{filter:brightness(0) invert(1)}
 .header.is-scrolled .brand__logo{filter:none}
 .footer .brand__logo{filter:brightness(0) invert(1)}
+.brand__divider{width:1px;height:34px;background:currentColor;opacity:.28;flex:none}
+.brand__logo--second{height:34px;max-width:130px;opacity:.92}
 .drawer__brand{padding:26px 30px 8px;border-bottom:1px solid var(--line)}
 .drawer__brand .brand__logo{height:40px;max-width:190px}
 
@@ -1021,6 +1023,8 @@ body.overlay-open{overflow:hidden}
 @media (max-width:640px){
   .header__numbers-label{display:none}
   .brand__logo{height:36px;max-width:170px}
+  .brand__divider{height:24px}
+  .brand__logo--second{height:22px;max-width:78px}
   .drawer__brand .brand__logo{height:34px}
   .branch-panel__brand .brand__logo{height:28px;max-width:120px}
   .gallery{grid-template-columns:1fr;grid-template-rows:repeat(3,240px)}
