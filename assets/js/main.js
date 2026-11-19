@@ -256,25 +256,25 @@
   });
 
   /* ---------- Opening scene ---------- */
-  var intro = document.getElementById('intro');
-  if (intro) {
-    var seenIntro = false;
-    try { seenIntro = window.sessionStorage.getItem('pf-intro') === '1'; } catch (err) {}
-    if (seenIntro) {
-      intro.remove();
+  var opening = document.getElementById('opening');
+  if (opening) {
+    var seenOpening = false;
+    try { seenOpening = window.sessionStorage.getItem('pf-opening') === '1'; } catch (err) {}
+    if (seenOpening) {
+      opening.remove();
     } else {
-      var finishIntro = function () {
-        if (!intro || intro.classList.contains('is-done')) return;
-        intro.classList.add('is-done');
-        try { window.sessionStorage.setItem('pf-intro', '1'); } catch (err) {}
-        window.setTimeout(function () { if (intro && intro.remove) intro.remove(); }, 750);
+      var finishOpening = function () {
+        if (!opening || opening.classList.contains('is-done')) return;
+        opening.classList.add('is-done');
+        try { window.sessionStorage.setItem('pf-opening', '1'); } catch (err) {}
+        window.setTimeout(function () { if (opening && opening.remove) opening.remove(); }, 750);
       };
-      var skip = intro.querySelector('.intro__skip');
-      if (skip) skip.addEventListener('click', finishIntro);
-      intro.addEventListener('click', function (e) {
-        if (e.target === intro) finishIntro();
+      var skipOpening = opening.querySelector('.opening__skip');
+      if (skipOpening) skipOpening.addEventListener('click', finishOpening);
+      opening.addEventListener('click', function (e) {
+        if (e.target === opening) finishOpening();
       });
-      window.setTimeout(finishIntro, reduceMotion ? 500 : 2600);
+      window.setTimeout(finishOpening, reduceMotion ? 500 : 2600);
     }
   }
 })();

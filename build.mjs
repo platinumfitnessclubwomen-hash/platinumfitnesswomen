@@ -251,7 +251,7 @@ const enquiryModal = () => `
   <div class="enquiry__panel" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" aria-describedby="enquiry-desc">
     <button class="enquiry__close" type="button" data-enquiry-close aria-label="Close enquiry form">&times;</button>
     <div class="enquiry__head">
-      <img class="enquiry__logo" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="180" height="46">
+      <img class="enquiry__logo" src="assets/img/src/logo-web.png" alt="Platinum Fitness Club Women Exclusive" width="180" height="46">
       <p class="eyebrow">Women-only · Hyderabad</p>
       <h2 class="display-m" id="enquiry-title">Start with a <em class="serif-italic">conversation.</em></h2>
       <p id="enquiry-desc">Tell us what you're looking for. Your answers open in WhatsApp, ready to send to ${WA_DISPLAY}.</p>
@@ -294,26 +294,38 @@ const enquiryModal = () => `
   </div>
 </div>`;
 
-const introScene = () => `
-<div class="intro" id="intro" aria-hidden="true">
-  <div class="intro__side intro__side--dark">
-    <img class="intro__logo" src="assets/img/src/logo-full.png" alt="" width="320" height="82">
-    <span class="intro__label">Platinum Fitness Club</span>
+const openingScene = () => `
+<div class="opening" id="opening" aria-hidden="true">
+  <div class="opening__side opening__side--dark">
+    <img class="opening__logo" src="assets/img/src/logo-web.png" alt="" width="420" height="190">
+    <span class="opening__label">Platinum Fitness Club</span>
   </div>
-  <div class="intro__side intro__side--cream">
-    <img class="intro__logo" src="assets/img/src/logo-black.png" alt="" width="320" height="82">
-    <span class="intro__label">Women Exclusive · Hyderabad</span>
+  <div class="opening__side opening__side--cream">
+    <img class="opening__logo" src="assets/img/src/logo-web.png" alt="" width="420" height="190">
+    <span class="opening__label">Women Exclusive · Hyderabad</span>
   </div>
-  <div class="intro__rule" aria-hidden="true"></div>
-  <button class="intro__skip" type="button">Skip intro</button>
+  <div class="opening__rule" aria-hidden="true"></div>
+  <button class="opening__skip" type="button">Skip intro</button>
+</div>`;
+
+const headerNumbers = () => `
+<div class="header__numbers">
+  <div class="wrap header__numbers-inner">
+    <span class="header__numbers-label">Call us</span>
+    <a href="tel:+919281022896"><span>Malakpet</span>092810 22896</a>
+    <a href="tel:+919849340257"><span>Attapur</span>098493 40257</a>
+    <a href="tel:+919281022891"><span>Saidabad</span>092810 22891</a>
+    <a href="https://wa.me/${WA}" target="_blank" rel="noopener"><span>WhatsApp</span>98493 40257</a>
+  </div>
 </div>`;
 
 const header = (branch) => `
 <a class="skip" href="#main">Skip to content</a>
 <header class="header header--over-hero" id="site-header">
+  ${headerNumbers()}
   <div class="wrap header__inner">
     <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-      <img class="brand__logo" src="assets/img/src/logo-full.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
+      <img class="brand__logo" src="assets/img/src/logo-web.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
     </a>
     <nav class="nav" aria-label="Primary">
       <a class="nav__link" href="index.html">Home</a>
@@ -343,7 +355,7 @@ const header = (branch) => `
     <a class="drawer__link" href="index.html#membership"><span>05</span>Membership</a>
   </nav>
   <div class="drawer__brand">
-    <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="190" height="48">
+    <img class="brand__logo" src="assets/img/src/logo-web.png" alt="" width="190" height="48">
   </div>
   <div class="drawer__foot">
     <p class="micro" style="color:var(--muted-light)">${branch.short} · Women-only</p>
@@ -357,7 +369,7 @@ const footer = (branch) => `
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-          <img class="brand__logo brand__logo--footer" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
+          <img class="brand__logo brand__logo--footer" src="assets/img/src/logo-web.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
         </a>
         <p class="footer__blurb">A women-only fitness club in Hyderabad. Three studios, female trainers, and programmes built around real women's bodies and schedules.</p>
         <div class="footer__social">
@@ -608,7 +620,7 @@ ${header(b)}
 
         <aside class="branch-panel" data-reveal data-reveal-delay="2" aria-label="Studio details">
           <div class="branch-panel__brand">
-            <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="180" height="46">
+            <img class="brand__logo" src="assets/img/src/logo-web.png" alt="" width="180" height="46">
             <span class="micro">${b.short} studio</span>
           </div>
           <dl style="margin:0">
@@ -934,7 +946,7 @@ ${header(b)}
 </main>
 ${footer(b)}
 ${enquiryModal()}
-${introScene()}
+${openingScene()}
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>`;

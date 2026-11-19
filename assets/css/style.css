@@ -184,6 +184,23 @@ figure,blockquote{margin:0}
 .header__phone svg{width:15px;height:15px;color:var(--teal)}
 .header__phone:hover{color:var(--teal)}
 
+/* All branch numbers, always visible */
+.header__numbers{background:var(--ink);border-bottom:1px solid rgba(247,243,236,.1)}
+.header__numbers-inner{
+  display:flex;align-items:center;justify-content:flex-end;gap:clamp(12px,1.8vw,26px);
+  min-height:30px;flex-wrap:wrap;padding-block:5px;
+  font-size:.66rem;letter-spacing:.04em;
+}
+.header__numbers-label{
+  color:var(--teal-bright);font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+}
+.header__numbers a{color:rgba(247,243,236,.8);white-space:nowrap;transition:color .3s}
+.header__numbers a span{
+  color:rgba(247,243,236,.45);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;margin-right:5px;
+}
+.header__numbers a:hover{color:#fff}
+.header__numbers a[href^="https://wa.me"]{color:var(--teal-bright)}
+
 /* Hero header variant: transparent over dark */
 .header--over-hero:not(.is-scrolled){color:var(--cream)}
 .header--over-hero:not(.is-scrolled) .brand__name{color:var(--cream)}
@@ -691,10 +708,10 @@ html.js [data-reveal-delay="4"]{transition-delay:.32s}
 /* ---------- Brand logo (supplied artwork) ---------- */
 .brand__logo{
   display:block;width:auto;max-width:220px;height:46px;object-fit:contain;
-  object-position:left center;filter:brightness(0);
+  object-position:left center;filter:none;
 }
 .header--over-hero:not(.is-scrolled) .brand__logo{filter:brightness(0) invert(1)}
-.header.is-scrolled .brand__logo{filter:brightness(0)}
+.header.is-scrolled .brand__logo{filter:none}
 .footer .brand__logo{filter:brightness(0) invert(1)}
 .drawer__brand{padding:26px 30px 8px;border-bottom:1px solid var(--line)}
 .drawer__brand .brand__logo{height:40px;max-width:190px}
@@ -822,7 +839,7 @@ html.js [data-reveal-delay="4"]{transition-delay:.32s}
   transition:background .3s,color .3s,border-color .3s;
 }
 .enquiry__close:hover{background:var(--teal);border-color:var(--teal);color:var(--cream)}
-.enquiry__logo{height:36px;max-width:170px;object-fit:contain;object-position:left center;filter:brightness(0)}
+.enquiry__logo{height:36px;max-width:170px;object-fit:contain;object-position:left center;filter:none}
 .enquiry__head .eyebrow{margin-top:20px}
 .enquiry__head h2{margin-top:10px;font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.08}
 .enquiry__head h2 em{color:var(--teal)}
@@ -845,32 +862,32 @@ html.js [data-reveal-delay="4"]{transition-delay:.32s}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes modalIn{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:none}}
 
-/* ---------- Opening scene ---------- */
-.intro{position:fixed;inset:0;z-index:1000;display:none;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
-html.js .intro:not(.is-done){display:grid}
-.intro__side{
+/* ---------- Opening scene (class name kept distinct from the editorial .intro section) ---------- */
+.opening{position:fixed;inset:0;z-index:1000;display:none;grid-template-columns:1fr 1fr;background:var(--ink);overflow:hidden}
+html.js .opening:not(.is-done){display:grid}
+.opening__side{
   position:relative;display:grid;place-content:center;gap:26px;padding:30px;text-align:center;
-  animation:introSideIn 1s var(--ease-out) both;
+  animation:openingSideIn 1s var(--ease-out) both;
 }
-.intro__side--dark{background:var(--ink);color:var(--cream)}
-.intro__side--cream{background:var(--cream);color:var(--ink);animation-delay:.12s}
-.intro__logo{width:min(300px,72vw);height:auto;margin:0 auto;filter:brightness(0) invert(1)}
-.intro__side--cream .intro__logo{filter:brightness(0)}
-.intro__label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase}
-.intro__rule{
+.opening__side--dark{background:var(--ink);color:var(--cream)}
+.opening__side--cream{background:var(--cream);color:var(--ink);animation-delay:.12s}
+.opening__logo{width:min(300px,72vw);height:auto;margin:0 auto;filter:brightness(0) invert(1)}
+.opening__side--cream .opening__logo{filter:none}
+.opening__label{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase}
+.opening__rule{
   position:absolute;left:0;right:0;top:50%;height:1px;background:var(--teal-bright);
-  transform:scaleX(0);animation:introRule 1.1s .35s var(--ease-out) forwards;
+  transform:scaleX(0);animation:openingRule 1.1s .35s var(--ease-out) forwards;
 }
-.intro__skip{
+.opening__skip{
   position:absolute;right:22px;bottom:20px;z-index:2;border:1px solid rgba(247,243,236,.35);
   background:transparent;color:var(--cream);padding:9px 14px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;
   transition:background .3s,color .3s;
 }
-.intro__skip:hover{background:var(--teal);border-color:var(--teal)}
-.intro.is-done{animation:introOut .65s var(--ease) both}
-@keyframes introSideIn{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
-@keyframes introRule{to{transform:scaleX(1)}}
-@keyframes introOut{to{opacity:0;visibility:hidden;transform:scale(1.04)}}
+.opening__skip:hover{background:var(--teal);border-color:var(--teal)}
+.opening.is-done{animation:openingOut .65s var(--ease) both}
+@keyframes openingSideIn{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes openingRule{to{transform:scaleX(1)}}
+@keyframes openingOut{to{opacity:0;visibility:hidden;transform:scale(1.04)}}
 
 /* ---------- Scroll progress ---------- */
 body.overlay-open{overflow:hidden}
@@ -896,7 +913,7 @@ body.overlay-open{overflow:hidden}
 
 @media (prefers-reduced-motion:reduce){
   .hero__glow,.hero__glow::before,.hero__glow::after,.hero__arches,.studio__badge,.pill--live{animation:none}
-  .enquiry__panel,.enquiry__backdrop,.intro__side,.intro__rule,.intro.is-done{animation-duration:.01ms}
+  .enquiry__panel,.enquiry__backdrop,.opening__side,.opening__rule,.opening.is-done{animation-duration:.01ms}
 }
 
 /* ---------- Responsive ---------- */
@@ -995,11 +1012,14 @@ body.overlay-open{overflow:hidden}
   .program--photo{min-height:250px}
 }
 @media (max-width:980px){
+  .header__numbers-inner{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .header__numbers-inner::-webkit-scrollbar{display:none}
   .hero__photo,.branch-hero__photo{background-position:62% center;opacity:.42}
   .experience__art{max-width:520px}
   .branch-panel__brand{margin-bottom:14px}
 }
 @media (max-width:640px){
+  .header__numbers-label{display:none}
   .brand__logo{height:36px;max-width:170px}
   .drawer__brand .brand__logo{height:34px}
   .branch-panel__brand .brand__logo{height:28px;max-width:120px}
