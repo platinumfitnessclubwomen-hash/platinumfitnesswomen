@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" height="200" role="img" aria-label="Platinum Fitness Club — Women Exclusive">
+  <rect width="720" height="200" fill="#F7F3EC"/>
+  <g fill="none" stroke="#17796F" stroke-linecap="round" transform="translate(48 44)">
+    <path d="M8 104V34a36 36 0 0 1 72 0v70" stroke-width="3"/>
+    <path d="M24 104V35a20 20 0 0 1 40 0v69" stroke-width="3" opacity=".45"/>
+  </g>
+  <circle cx="100" cy="106" r="6" fill="#17796F"/>
+  <text x="168" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="54" letter-spacing="10" fill="#0A1211">PLATINUM</text>
+  <text x="170" y="122" font-family="Helvetica, Arial, sans-serif" font-size="15" letter-spacing="9" fill="#0A1211">FITNESS CLUB</text>
+  <text x="170" y="152" font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="6" fill="#17796F">WOMEN EXCLUSIVE</text>
+</svg>

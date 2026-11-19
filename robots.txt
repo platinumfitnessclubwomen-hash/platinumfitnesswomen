@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://platinumfitnessclubwomen-hash.github.io/platinumfitnesswomen/sitemap.xml
