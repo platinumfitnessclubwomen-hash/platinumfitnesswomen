@@ -13,6 +13,13 @@ const stars = (n = 5) =>
     '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg>'
   ).join('');
 
+const fmt12 = (t) => {
+  const [h, m] = t.split(':').map(Number);
+  const suffix = h >= 12 ? 'pm' : 'am';
+  const hh = h % 12 === 0 ? 12 : h % 12;
+  return `${hh}:${String(m).padStart(2, '0')} ${suffix}`;
+};
+
 const ico = {
   clock: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.6V8l2.4 1.6"/></svg>',
   pin: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 14s-5-4.4-5-8a5 5 0 0 1 10 0c0 3.6-5 8-5 8Z"/><circle cx="8" cy="6" r="1.6"/></svg>',
@@ -339,7 +346,7 @@ const footer = (branch) => `
 
 function page(b) {
   const url = `${BASE}/${b.slug}.html`;
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(b.address)}&output=embed`;
+  const mapSrc = `https://maps.google.com/maps?q=${b.geo.lat},${b.geo.lng}&z=17&hl=en&output=embed`;
   const dirUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(b.address)}`;
   const gbpUrl = `https://www.google.com/maps/search/${encodeURIComponent('Platinum Fitness Club Women Exclusive ' + b.short + ' Hyderabad')}`;
   const waUrl = `https://wa.me/${b.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${b.short} studio.`)}`;
@@ -520,7 +527,7 @@ ${header(b)}
             </div>
             <div class="branch-panel__row">
               <dt>Mon – Sat</dt>
-              <dd>${b.open.replace(':', '.')} am – ${b.closeLabel}</dd>
+              <dd>${fmt12(b.open)} – ${fmt12(b.close)}</dd>
             </div>
             <div class="branch-panel__row">
               <dt>Sunday</dt>
@@ -545,7 +552,7 @@ ${header(b)}
     <div class="wrap facts__grid">
       <div class="fact">
         ${ico.clock}
-        <div><div class="fact__k">Timings</div><div class="fact__v">Mon – Sat<small>${b.open.replace(':', '.')} am – ${b.closeLabel} · Sunday closed</small></div></div>
+        <div><div class="fact__k">Timings</div><div class="fact__v">Mon – Sat<small>${fmt12(b.open)} – ${fmt12(b.close)} · Sunday closed</small></div></div>
       </div>
       <div class="fact">
         ${ico.phone}
@@ -651,12 +658,12 @@ ${header(b)}
           <table class="hours-table" style="margin-top:28px">
             <caption class="micro" style="text-align:left;margin-bottom:6px">Opening hours</caption>
             <tbody>
-              <tr><th scope="row">Monday</th><td>${b.open} – ${b.close}</td></tr>
-              <tr><th scope="row">Tuesday</th><td>${b.open} – ${b.close}</td></tr>
-              <tr><th scope="row">Wednesday</th><td>${b.open} – ${b.close}</td></tr>
-              <tr><th scope="row">Thursday</th><td>${b.open} – ${b.close}</td></tr>
-              <tr><th scope="row">Friday</th><td>${b.open} – ${b.close}</td></tr>
-              <tr><th scope="row">Saturday</th><td>${b.open} – ${b.close}</td></tr>
+              <tr><th scope="row">Monday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
+              <tr><th scope="row">Tuesday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
+              <tr><th scope="row">Wednesday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
+              <tr><th scope="row">Thursday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
+              <tr><th scope="row">Friday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
+              <tr><th scope="row">Saturday</th><td>${fmt12(b.open)} – ${fmt12(b.close)}</td></tr>
               <tr class="is-closed"><th scope="row">Sunday</th><td>Closed</td></tr>
             </tbody>
           </table>
@@ -794,7 +801,7 @@ ${header(b)}
         </div>
         <div class="cta-band__line">
           ${ico.clock}
-          <div><strong>Timings</strong><span>Monday – Saturday, ${b.open.replace(':', '.')} am – ${b.closeLabel}<br>Sunday closed</span></div>
+          <div><strong>Timings</strong><span>Monday – Saturday, ${fmt12(b.open)} – ${fmt12(b.close)}<br>Sunday closed</span></div>
         </div>
         <div class="cta-band__line">
           ${ico.phone}
