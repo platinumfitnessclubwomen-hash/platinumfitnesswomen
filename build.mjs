@@ -66,20 +66,20 @@ const branches = [
     landmark: 'Opposite Metro Pillar No. 1456, in the Zudio building — first floor, look for the Platinum board.',
     metro: 'Malakpet metro station is a short walk away.',
     nearby: ['Dilsukhnagar', 'Santoshnagar', 'LB Nagar', 'Koti', 'Chaderghat', 'Moosarambagh', 'Amberpet', 'Saidabad'],
-    intro: 'Our Malakpet studio sits on the first floor of the Zudio building, a minute from Malakpet metro. It is the busiest of the three — and the one most members simply walk to.',
+    intro: 'Our Malakpet branch sits on the first floor of the Zudio building, a minute from Malakpet metro. It is the busiest of the three — and the one most members simply walk to.',
     story: [
-      'The Malakpet studio is the club\'s city-side home: a full floor of strength and cardio equipment, a dedicated space for group classes, and separate changing rooms with lockers and showers. Being a minute from Malakpet metro makes it the easiest studio to reach before work or after a late shift.',
-      'Trainers here run a high proportion of PCOS and thyroid programmes, and the early-morning crowd is a fixture. If you have been meaning to start but keep putting it off until "next month", this is the studio to walk into on a Monday.'
+      'The Malakpet branch is the club\'s city-side home: a full floor of strength and cardio equipment, a dedicated space for group classes, and separate changing rooms with lockers and showers. Being a minute from Malakpet metro makes it the easiest branch to reach before work or after a late shift.',
+      'Trainers here run a high proportion of PCOS and thyroid programmes, and the early-morning crowd is a fixture. If you have been meaning to start but keep putting it off until "next month", this is the branch to walk into on a Monday.'
     ],
     amenities: ['Female trainers', 'Pilates & yoga', 'Zumba & aerobics', 'Cardio zone', 'Sauna & steam', 'Lockers & showers', 'PCOS & thyroid care'],
     reasons: [
       ['A minute from the metro', 'Opposite Metro Pillar 1456, on the first floor of the Zudio building — easy before work, after college, or on the way home.'],
       ['Clinically informed, at every age', 'PCOS, thyroid, diabetes and joint-friendly programmes, scaled from first-timers in their twenties to women in their sixties.'],
-      ['Women on the floor, always', 'Female trainers, a women-only floor, and 500+ members who mostly live within a few kilometres of the studio.'],
-      ['The busiest studio, for a reason', '4.7 from 307 reviews, and one of the highest volumes of PCOS and thyroid programmes in the club.']
+      ['Women on the floor, always', 'Female trainers, a women-only floor, and 500+ members who mostly live within a few kilometres of the branch.'],
+      ['The busiest branch, for a reason', '4.7 from 307 reviews, and one of the highest volumes of PCOS and thyroid programmes in the club.']
     ],
     local: [
-      'If you are looking for a women\'s gym near Malakpet, Dilsukhnagar or LB Nagar, the studio is a short drive from all three. We are opposite Metro Pillar 1456 — the same building as Zudio — so the commute is one stop on the metro, or a straight run down the main road from Koti and Chaderghat.',
+      'If you are looking for a women\'s gym near Malakpet, Dilsukhnagar or LB Nagar, the branch is a short drive from all three. We are opposite Metro Pillar 1456 — the same building as Zudio — so the commute is one stop on the metro, or a straight run down the main road from Koti and Chaderghat.',
       'Members also travel from Santoshnagar, Moosarambagh, Amberpet and Saidabad. If you are coming by metro, get off at Malakpet and walk; if you are driving, call ahead and the team will point you to the entrance and the lift.'
     ],
     programmes: [
@@ -95,9 +95,9 @@ const branches = [
       { text: 'Excellent gym ambience and peaceful place to do your workouts.', who: 'Google member review', rating: 5 }
     ],
     faq: [
-      ['What are the Malakpet studio timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
-      ['How do I reach the studio?', 'We are on the first floor of the Zudio building, opposite Metro Pillar No. 1456 in Anand Nagar Colony. Malakpet metro station is a short walk away.'],
+      ['What are the Malakpet branch timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The branch is closed on Sundays.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the branch or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
+      ['How do I reach the branch?', 'We are on the first floor of the Zudio building, opposite Metro Pillar No. 1456 in Anand Nagar Colony. Malakpet metro station is a short walk away.'],
       ['Do you have women trainers?', 'Yes. Our floor trainers are women, and they lead the strength, PCOS and thyroid programmes.'],
       ['Which areas do you serve?', 'Members travel to us from Malakpet, Dilsukhnagar, Santoshnagar, LB Nagar, Koti, Chaderghat, Moosarambagh, Amberpet and Saidabad.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties. Every programme is scaled to age, experience and medical history, and older members train with a trainer nearby on machines chosen for joints and balance.'],
@@ -135,26 +135,26 @@ const branches = [
     landmark: 'Opposite Pillar No. 151, first floor of Shree Bhagya Laxmi Plaza — above the shops, look for the Platinum board.',
     metro: 'A short auto ride from Mehdipatnam and Tolichowki.',
     nearby: ['Mehdipatnam', 'Tolichowki', 'Rajendranagar', 'Langar Houz', 'Gudimalkapur', 'Hyderguda', 'Bandlaguda', 'Aramghar'],
-    intro: 'Attapur is our highest-rated studio — 4.9 from 666 reviews — on the first floor of Shree Bhagya Laxmi Plaza, opposite Pillar 151.',
+    intro: 'Attapur is our highest-rated branch — 4.9 from 666 reviews — on the first floor of Shree Bhagya Laxmi Plaza, opposite Pillar 151.',
     story: [
       'Attapur is the club at its most complete: a large strength floor, a cardio zone, space for group classes and recovery rooms for after. Members come from Mehdipatnam, Tolichowki and Rajendranagar, and the evening floor has the energy of a club that has been at it for years.',
       'If you are coming from the Financial District side, this is the straightest drive of the three. Come in the morning for a quieter floor, or after work when the music is up and the classes are full.'
     ],
     amenities: ['Female trainers', 'Pilates studio', 'EMS training', 'Sauna & steam', 'Group classes', 'Cardio zone', 'Lockers & showers', 'Nutrition guidance'],
     reasons: [
-      ['The club\'s most complete floor', 'Strength, cardio, group-class space and recovery rooms on one floor — the studio most members picture when they think of Platinum.'],
-      ['4.9 from 666 reviews', 'Our highest-rated studio, and the one with the longest waiting list for evening classes.'],
+      ['The club\'s most complete floor', 'Strength, cardio, group-class space and recovery rooms on one floor — the branch most members picture when they think of Platinum.'],
+      ['4.9 from 666 reviews', 'Our highest-rated branch, and the one with the longest waiting list for evening classes.'],
       ['Clinically informed, at every age', 'PCOS, thyroid, diabetes, menopause and joint-friendly programmes, with trainers who scale load to age and history.'],
-      ['A physiotherapy clinic in the same building', 'Attapur shares its address with a physiotherapy clinic, which makes it the easiest studio for members managing an injury alongside training.']
+      ['A physiotherapy clinic in the same building', 'Attapur shares its address with a physiotherapy clinic, which makes it the easiest branch for members managing an injury alongside training.']
     ],
     local: [
-      'For women in Mehdipatnam, Tolichowki and Rajendranagar, Attapur is the straightest drive of our three studios: first floor of Shree Bhagya Laxmi Plaza, opposite Pillar No. 151. Members come from Langar Houz, Gudimalkapur, Hyderguda, Bandlaguda and Aramghar, and the evening floor fills up early.',
+      'For women in Mehdipatnam, Tolichowki and Rajendranagar, Attapur is the straightest drive of our three branches: first floor of Shree Bhagya Laxmi Plaza, opposite Pillar No. 151. Members come from Langar Houz, Gudimalkapur, Hyderguda, Bandlaguda and Aramghar, and the evening floor fills up early.',
       'If you are searching for a women\'s gym near Attapur, call before you come and we will tell you exactly where to turn off the main road, where to park, and which lift takes you to the first floor.'
     ],
     programmes: [
       { title: 'Strength & conditioning', desc: 'A large free-weight floor with racks, cables and machines — and trainers who know the difference between sore and injured.', tags: ['Free weights', 'Machines'] },
       { title: 'Pilates & core', desc: 'Controlled, low-impact work for posture, deep core strength and recovery from desk-bound days.', tags: ['Posture', 'Low impact'] },
-      { title: 'Zumba, yoga & aerobics', desc: 'The studio\'s group classes are the reason many members keep coming back through the week.', tags: ['Group energy'] },
+      { title: 'Zumba, yoga & aerobics', desc: 'The branch\'s group classes are the reason many members keep coming back through the week.', tags: ['Group energy'] },
       { title: 'Sauna, steam & recovery', desc: 'Finish with heat, then a shower and a locker that is actually yours for the hour.', tags: ['Recovery', 'Lockers'] }
     ],
     quotes: [
@@ -164,10 +164,10 @@ const branches = [
       { text: 'The best thing about this place is its ambience and the facilities they provide.', who: 'Google member review', rating: 5 }
     ],
     faq: [
-      ['What are the Attapur studio timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
-      ['How do I reach the studio?', 'We are on the first floor of Shree Bhagya Laxmi Plaza, opposite Pillar No. 151 in Attapur. Look for the Platinum board above the shops.'],
-      ['Do you have Pilates and sauna?', 'Yes. Pilates and core work are part of the class schedule, and sauna and steam are available as recovery facilities. Confirm current class timings with the studio.'],
+      ['What are the Attapur branch timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The branch is closed on Sundays.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the branch or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
+      ['How do I reach the branch?', 'We are on the first floor of Shree Bhagya Laxmi Plaza, opposite Pillar No. 151 in Attapur. Look for the Platinum board above the shops.'],
+      ['Do you have Pilates and sauna?', 'Yes. Pilates and core work are part of the class schedule, and sauna and steam are available as recovery facilities. Confirm current class timings with the branch.'],
       ['Which areas do you serve?', 'Members travel to us from Attapur, Mehdipatnam, Tolichowki, Rajendranagar, Langar Houz, Gudimalkapur, Hyderguda and Bandlaguda.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties. Programming is scaled to age, experience and medical history — older members train with a trainer nearby, on machines chosen for joints and balance.'],
       ['Is the training clinically informed?', 'Yes — PCOS, thyroid, diabetes, hypertension, menopause, bone health and post-partum programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
@@ -204,21 +204,21 @@ const branches = [
     landmark: 'Above Ratnadeep Supermarket on the first floor, at Zahoor Bagh — the entrance is from the Shankeshwar Bazar side.',
     metro: 'A short ride from Dilsukhnagar and Malakpet.',
     nearby: ['Saidabad', 'Saroornagar', 'Dilsukhnagar', 'Madannapet', 'Champapet', 'Kothapet', 'Malakpet', 'Asmangadh'],
-    intro: 'Our newest studio, above Ratnadeep Supermarket in Saidabad — 5.0 from 40 reviews, with new equipment and a calmer floor. Saidabad is a gym-only floor: no group classes, just equipment, space and trainers.',
+    intro: 'Our newest branch, above Ratnadeep Supermarket in Saidabad — 5.0 from 40 reviews, with new equipment and a calmer floor. Saidabad is a gym-only floor: no group classes, just equipment, space and trainers.',
     story: [
       'Saidabad opened most recently, which means the equipment is new, the floor is quiet, and the trainers have time for women who are just starting. It is smaller and calmer than Attapur — many members describe it as the easiest place to begin.',
       'Being above Ratnadeep means errands and a workout fit into one trip. Come in the morning for a nearly empty floor, or in the early evening for a one-to-one session. There are no group classes on this floor — the equipment is yours when you need it.'
     ],
     amenities: ['Female trainers', 'New equipment', 'Strength & cardio', 'Personal training', '1:1 mobility work', 'Lockers & showers', 'PCOS & thyroid care'],
     reasons: [
-      ['New equipment, quieter floor', 'Our newest studio means newer machines, a calmer floor and more of a trainer\'s time — particularly in the morning.'],
+      ['New equipment, quieter floor', 'Our newest branch means newer machines, a calmer floor and more of a trainer\'s time — particularly in the morning.'],
       ['The easiest place to begin', 'Many members start here. Personal training is available for the first few weeks if you would like someone beside you.'],
       ['Clinically informed, at every age', 'PCOS, thyroid, post-partum and joint-friendly programmes, scaled for women from their twenties to their sixties.'],
-      ['Above Ratnadeep', 'Errands and a workout in one trip — the studio is on the first floor, with the entrance from the Shankeshwar Bazar side.']
+      ['Above Ratnadeep', 'Errands and a workout in one trip — the branch is on the first floor, with the entrance from the Shankeshwar Bazar side.']
     ],
     local: [
-      'For women in Saidabad, Saroornagar and Champapet, this is the closest Platinum studio. We are above Ratnadeep Supermarket at Zahoor Bagh, Shankeshwar Bazar, with members travelling in from Madannapet, Kothapet, Dilsukhnagar and Malakpet.',
-      'If you are looking for a women\'s gym near Saidabad, call the studio and we will walk you through the entrance, the lift and the timings — the floor is quietest mid-morning and early afternoon.'
+      'For women in Saidabad, Saroornagar and Champapet, this is the closest Platinum branch. We are above Ratnadeep Supermarket at Zahoor Bagh, Shankeshwar Bazar, with members travelling in from Madannapet, Kothapet, Dilsukhnagar and Malakpet.',
+      'If you are looking for a women\'s gym near Saidabad, call the branch and we will walk you through the entrance, the lift and the timings — the floor is quietest mid-morning and early afternoon.'
     ],
     programmes: [
       { title: 'Personal training', desc: 'One-to-one coaching for your first three months — the fastest way to learn the machines and build a habit.', tags: ['1:1', 'Beginners'] },
@@ -233,13 +233,13 @@ const branches = [
       { text: 'A newly opened place with a very positive and comfortable atmosphere.', who: 'Google member review', rating: 5 }
     ],
     faq: [
-      ['What are the Saidabad studio timings?', 'Monday to Saturday, 6:15 am to 8:30 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
-      ['How do I reach the studio?', 'We are on the first floor above Ratnadeep Supermarket at Zahoor Bagh, Shankeshwar Bazar, Saidabad. The entrance is from the Shankeshwar Bazar side.'],
-      ['Is this a good studio for beginners?', 'Yes. Saidabad is our newest and calmest floor, and personal training is available if you would like a trainer beside you for the first few weeks.'],
-      ['Do you run group classes at Saidabad?', 'No. Saidabad is a gym-only studio with no group classes on the floor. What you get is a quiet, well-equipped gym with female trainers, strength and cardio machines, personal training and one-to-one mobility work. If you want yoga, Pilates, Zumba or aerobics classes, our Malakpet and Attapur studios run those through the week.'],
+      ['What are the Saidabad branch timings?', 'Monday to Saturday, 6:15 am to 8:30 pm. The branch is closed on Sundays.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the branch or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
+      ['How do I reach the branch?', 'We are on the first floor above Ratnadeep Supermarket at Zahoor Bagh, Shankeshwar Bazar, Saidabad. The entrance is from the Shankeshwar Bazar side.'],
+      ['Is this a good branch for beginners?', 'Yes. Saidabad is our newest and calmest floor, and personal training is available if you would like a trainer beside you for the first few weeks.'],
+      ['Do you run group classes at Saidabad?', 'No. Saidabad is a gym-only branch with no group classes on the floor. What you get is a quiet, well-equipped gym with female trainers, strength and cardio machines, personal training and one-to-one mobility work. If you want yoga, Pilates, Zumba or aerobics classes, our Malakpet and Attapur branches run those through the week.'],
       ['Which areas do you serve?', 'Members travel to us from Saidabad, Saroornagar, Dilsukhnagar, Madannapet, Champapet, Kothapet, Malakpet and Asmangadh.'],
-      ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties, and the studio is a particularly easy place for beginners. Every programme is scaled to age, experience and medical history.'],
+      ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties, and the branch is a particularly easy place for beginners. Every programme is scaled to age, experience and medical history.'],
       ['Is the training clinically informed?', 'Yes — PCOS, thyroid, post-partum, menopause and joint-friendly programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
     ]
   }
@@ -262,7 +262,7 @@ const enquiryModal = () => `
         <input type="text" name="name" autocomplete="name" placeholder="Your name" required>
       </label>
       <label>
-        <span>Studio</span>
+        <span>Branch</span>
         <select name="branch" required>
           <option value="malakpet">Malakpet</option>
           <option value="attapur">Attapur</option>
@@ -373,7 +373,7 @@ const footer = (branch) => `
         <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
           <img class="brand__logo brand__logo--footer" src="assets/img/src/logo-web.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
         </a>
-        <p class="footer__blurb">A women-only fitness club in Hyderabad. Three studios, female trainers, and programmes built around real women's bodies and schedules.</p>
+        <p class="footer__blurb">A women-only fitness club in Hyderabad. Three branches, female trainers, and programmes built around real women's bodies and schedules.</p>
         <div class="footer__social">
           <a href="https://wa.me/${branch.wa}" target="_blank" rel="noopener" aria-label="WhatsApp ${branch.short}">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5 0a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.7s-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3Z"/></svg>
@@ -387,7 +387,7 @@ const footer = (branch) => `
         </div>
       </div>
       <div>
-        <div class="footer__h">Studios</div>
+        <div class="footer__h">Our Branches</div>
         <div class="footer__list">
           <a href="malakpet.html">Malakpet</a>
           <a href="attapur.html">Attapur</a>
@@ -404,7 +404,7 @@ const footer = (branch) => `
         </div>
       </div>
       <div>
-        <div class="footer__h">${branch.short} studio</div>
+        <div class="footer__h">${branch.short} branch</div>
         <div class="footer__list">
           <span>${branch.addressShort}</span>
           <a href="tel:${branch.phoneRaw}">${branch.phoneDisplay}</a>
@@ -424,7 +424,7 @@ const footer = (branch) => `
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 3.5 9 8l-2 1.6a12.5 12.5 0 0 0 6.9 6.9L15.5 14l4.5 2.4v3.1a2 2 0 0 1-2.2 2A17.5 17.5 0 0 1 3.5 5.7a2 2 0 0 1 2-2.2h1.1Z"/></svg>
     Call
   </a>
-  <a href="https://wa.me/${branch.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${branch.short} studio.`)}" target="_blank" rel="noopener">
+  <a href="https://wa.me/${branch.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${branch.short} branch.`)}" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20Z"/></svg>
     WhatsApp
   </a>
@@ -439,7 +439,7 @@ function page(b) {
   const mapSrc = `https://maps.google.com/maps?q=${b.geo.lat},${b.geo.lng}&z=17&hl=en&output=embed`;
   const dirUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(b.address)}`;
   const gbpUrl = `https://www.google.com/maps/search/${encodeURIComponent('Platinum Fitness Club Women Exclusive ' + b.short + ' Hyderabad')}`;
-  const waUrl = `https://wa.me/${b.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${b.short} studio.`)}`;
+  const waUrl = `https://wa.me/${b.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${b.short} branch.`)}`;
 
   const schema = {
     '@context': 'https://schema.org',
@@ -503,7 +503,7 @@ function page(b) {
           {
             '@type': 'Offer',
             name: 'Free trial and body assessment',
-            description: 'One complimentary trial session with a body assessment and studio walkthrough, Monday to Saturday.',
+            description: 'One complimentary trial session with a body assessment and branch walkthrough, Monday to Saturday.',
             category: 'Trial membership',
             availability: 'https://schema.org/InStock'
           },
@@ -524,7 +524,7 @@ function page(b) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${BASE}/` },
-          { '@type': 'ListItem', position: 2, name: 'Studios', item: `${BASE}/#studios` },
+          { '@type': 'ListItem', position: 2, name: 'Our Branches', item: `${BASE}/#branches` },
           { '@type': 'ListItem', position: 3, name: b.short, item: url }
         ]
       },
@@ -589,14 +589,14 @@ ${header(b)}
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="index.html">Home</a>
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
-        <a href="index.html#studios">Studios</a>
+        <a href="index.html#branches">Our Branches</a>
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg>
         <span>${b.short}</span>
       </nav>
 
       <div class="branch-hero__grid">
         <div>
-          <p class="eyebrow" data-reveal>Women-exclusive studio · ${b.locality}</p>
+          <p class="eyebrow" data-reveal>Women-exclusive branch · ${b.locality}</p>
           <h1 class="branch-hero__title" data-reveal data-reveal-delay="1">
             ${b.short}
             <span>Platinum Fitness Club · Women Exclusive</span>
@@ -620,10 +620,10 @@ ${header(b)}
           </div>
         </div>
 
-        <aside class="branch-panel" data-reveal data-reveal-delay="2" aria-label="Studio details">
+        <aside class="branch-panel" data-reveal data-reveal-delay="2" aria-label="Branch details">
           <div class="branch-panel__brand">
             <img class="brand__logo" src="assets/img/src/logo-web.png" alt="" width="180" height="46">
-            <span class="micro">${b.short} studio</span>
+            <span class="micro">${b.short} branch</span>
           </div>
           <dl style="margin:0">
             <div class="branch-panel__row">
@@ -651,7 +651,7 @@ ${header(b)}
               <dd>${b.plus} ${b.locality}</dd>
             </div>
           </dl>
-          <a class="btn btn--light btn--block" href="tel:${b.phoneRaw}">Call the studio</a>
+          <a class="btn btn--light btn--block" href="tel:${b.phoneRaw}">Call the branch</a>
         </aside>
       </div>
     </div>
@@ -681,7 +681,7 @@ ${header(b)}
   <section class="section">
     <div class="wrap story">
       <div data-reveal>
-        <p class="eyebrow">The studio</p>
+        <p class="eyebrow">The branch</p>
         <h2 class="display-m" style="margin-top:18px">A women-only floor in the middle of ${b.locality}.</h2>
         <p class="lede" style="margin-top:22px">${b.intro}</p>
         <p class="body-muted" style="font-size:.95rem">${b.story[0]}</p>
@@ -691,11 +691,11 @@ ${header(b)}
         </div>
       </div>
       <div class="story__art" data-reveal data-reveal-delay="2">
-        <div class="story__photo" style="background-image:url('${b.img.story}')" role="img" aria-label="Women training at the ${b.short} studio"></div>
+        <div class="story__photo" style="background-image:url('${b.img.story}')" role="img" aria-label="Women training at the ${b.short} branch"></div>
         <div class="story__frame" aria-hidden="true"></div>
         <span class="story__monogram" aria-hidden="true">${b.initials}</span>
         <div class="story__caption">
-          <span class="micro">${b.short} studio</span>
+          <span class="micro">${b.short} branch</span>
           <p>${b.metro}</p>
         </div>
       </div>
@@ -736,7 +736,7 @@ ${header(b)}
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow" data-reveal>Inside the studio</p>
+          <p class="eyebrow" data-reveal>Inside the branch</p>
           <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">A look at the floor <em class="serif-italic">at ${b.short}.</em></h2>
         </div>
         <p class="section-head__aside" data-reveal data-reveal-delay="2">Real training, real women, real equipment. Come and see the floor for yourself on a free trial.</p>
@@ -759,7 +759,7 @@ ${header(b)}
       <div class="offer__num" data-reveal>3+1<small>Months</small></div>
       <div data-reveal data-reveal-delay="1">
         <h2 class="offer__title">Pay for three months. Train for four.</h2>
-        <p class="offer__note">The current offer for new members at ${b.short}, subject to seats available. Message the studio for the plan sheet and we will confirm your inclusions in writing.</p>
+        <p class="offer__note">The current offer for new members at ${b.short}, subject to seats available. Message the branch for the plan sheet and we will confirm your inclusions in writing.</p>
       </div>
       <a class="btn btn--light" href="${waUrl}" target="_blank" rel="noopener" data-reveal data-reveal-delay="2">Ask about 3+1 ${ico.arrow}</a>
     </div>
@@ -770,7 +770,7 @@ ${header(b)}
       <div class="section-head">
         <div>
           <p class="eyebrow" data-reveal>Getting here</p>
-          <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">Find the <em class="serif-italic">${b.short} studio.</em></h2>
+          <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">Find the <em class="serif-italic">${b.short} branch.</em></h2>
         </div>
         <a class="link-arrow" href="${dirUrl}" target="_blank" rel="noopener" data-reveal data-reveal-delay="2">Open in Google Maps ${ico.ext}</a>
       </div>
@@ -825,7 +825,7 @@ ${header(b)}
           <div class="num">${b.members}</div>
           <div class="lbl">Active members at ${b.short}</div>
           <div class="hr"></div>
-          <p>Most live within a short drive of the studio. Walk in for a free trial and see the floor at the time you would actually train.</p>
+          <p>Most live within a short drive of the branch. Walk in for a free trial and see the floor at the time you would actually train.</p>
           <div class="nearby__chips" style="margin-top:18px">
             ${b.nearby.slice(0, 6).map((n) => `<span class="chip">${n}</span>`).join('')}
           </div>
@@ -841,7 +841,7 @@ ${header(b)}
           <p class="eyebrow" data-reveal>Why women choose ${b.short}</p>
           <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">Four reasons this floor <em class="serif-italic">works.</em></h2>
         </div>
-        <p class="section-head__aside" data-reveal data-reveal-delay="2">The same standard at all three studios, with the character of the neighbourhood it sits in.</p>
+        <p class="section-head__aside" data-reveal data-reveal-delay="2">The same standard at all three branches, with the character of the neighbourhood it sits in.</p>
       </div>
       <div class="clinical clinical--two">
         ${b.reasons
@@ -892,7 +892,7 @@ ${header(b)}
       <div>
         <p class="eyebrow" data-reveal>${b.short} questions</p>
         <h2 class="display-l" style="margin-top:18px" data-reveal data-reveal-delay="1">Before you <em class="serif-italic">visit.</em></h2>
-        <p class="body-muted" style="margin-top:22px;max-width:32ch;font-size:.92rem" data-reveal data-reveal-delay="2">Call the studio and a real person will answer — Monday to Saturday, during opening hours.</p>
+        <p class="body-muted" style="margin-top:22px;max-width:32ch;font-size:.92rem" data-reveal data-reveal-delay="2">Call the branch and a real person will answer — Monday to Saturday, during opening hours.</p>
         <a class="btn btn--ghost" style="margin-top:22px" href="tel:${b.phoneRaw}" data-reveal data-reveal-delay="3">Call ${b.phoneDisplay}</a>
       </div>
       <div class="faq__list" data-reveal data-reveal-delay="2">
@@ -939,7 +939,7 @@ ${header(b)}
         </div>
         <div class="cta-band__line">
           ${ico.phone}
-          <div><strong>Studio line</strong><span><a href="tel:${b.phoneRaw}">${b.phoneDisplay}</a></span></div>
+          <div><strong>Branch line</strong><span><a href="tel:${b.phoneRaw}">${b.phoneDisplay}</a></span></div>
         </div>
       </div>
     </div>
