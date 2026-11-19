@@ -86,6 +86,60 @@
         "reviewCount": "666",
         "bestRating": "5"
       },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Arefa Mohammadi"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Newly joined at Platinum Women Exclusive and I am absolutely loving it! Best ladies gym with such a positive, safe and comfortable environment. The gym is very clean and well-maintained with great equipment."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Sumaiya Firdous"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "I had a really good experience at Platinum Gym! Raziya Parveen Ma’am is an amazing personal trainer — very supportive, motivating, patient, and dedicated."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Shahnaz Parveen"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "I am 62 years old, and I joined this gym one month ago. I really like the environment here. It is comfortable, positive, and welcoming. As a senior, I feel comfortable and confident working out here."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Google member review"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "The best thing about this place is its ambience and the facilities they provide."
+        }
+      ],
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
@@ -246,7 +300,7 @@
           "name": "Is there a free trial?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes — a free trial session with a body assessment. Call or WhatsApp 098493 40257 to book a slot, Monday to Saturday."
+            "text": "Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday."
           }
         },
         {
@@ -301,15 +355,7 @@
 <header class="header header--over-hero" id="site-header">
   <div class="wrap header__inner">
     <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-      <svg class="brand__mark" viewBox="0 0 40 48" aria-hidden="true" fill="none">
-        <path d="M5 46V21.5C5 13.5 11.7 7 20 7s15 6.5 15 14.5V46" stroke="currentColor" stroke-width="1.4"/>
-        <path d="M12 46V22.2c0-4.6 3.6-8.3 8-8.3s8 3.7 8 8.3V46" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
-        <circle cx="20" cy="29" r="2.6" fill="currentColor"/>
-      </svg>
-      <span class="brand__type">
-        <span class="brand__name">Platinum</span>
-        <span class="brand__sub">Fitness Club · Women Exclusive</span>
-      </span>
+      <img class="brand__logo" src="assets/img/src/logo-full.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
     </a>
     <nav class="nav" aria-label="Primary">
       <a class="nav__link" href="index.html">Home</a>
@@ -324,7 +370,7 @@
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.5 2.5 6 6 4.7 7a9 9 0 0 0 4.3 4.3L10 10l3.5 1.5v2a1.4 1.4 0 0 1-1.6 1.4A12 12 0 0 1 3.1 5.9 1.4 1.4 0 0 1 4.5 4.3Z"/></svg>
         098493 40257
       </a>
-      <a class="btn btn--ghost btn--sm" href="https://wa.me/919849340257?text=Hi%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20the%20Attapur%20studio." target="_blank" rel="noopener">Free trial</a>
+      <button class="btn btn--ghost btn--sm js-enquire" type="button">Enquire</button>
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
     </div>
   </div>
@@ -338,6 +384,9 @@
     <a class="drawer__link" href="saidabad.html"><span>04</span>Saidabad</a>
     <a class="drawer__link" href="index.html#membership"><span>05</span>Membership</a>
   </nav>
+  <div class="drawer__brand">
+    <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="190" height="48">
+  </div>
   <div class="drawer__foot">
     <p class="micro" style="color:var(--muted-light)">Attapur · Women-only</p>
     <a class="drawer__phone" href="tel:+919849340257">098493 40257</a>
@@ -347,6 +396,7 @@
 <main id="main">
 
   <section class="branch-hero grain">
+    <div class="branch-hero__photo" style="background-image:url('assets/img/src/w-group.jpg')" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap branch-hero__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -384,6 +434,10 @@
         </div>
 
         <aside class="branch-panel" data-reveal data-reveal-delay="2" aria-label="Studio details">
+          <div class="branch-panel__brand">
+            <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="180" height="46">
+            <span class="micro">Attapur studio</span>
+          </div>
           <dl style="margin:0">
             <div class="branch-panel__row">
               <dt>Rating</dt>
@@ -424,7 +478,7 @@
       </div>
       <div class="fact">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.5 2.5 6 6 4.7 7a9 9 0 0 0 4.3 4.3L10 10l3.5 1.5v2a1.4 1.4 0 0 1-1.6 1.4A12 12 0 0 1 3.1 5.9 1.4 1.4 0 0 1 4.5 4.3Z"/></svg>
-        <div><div class="fact__k">Direct line</div><div class="fact__v"><a href="tel:+919849340257">098493 40257</a><small>Call or WhatsApp</small></div></div>
+        <div><div class="fact__k">Direct line</div><div class="fact__v"><a href="tel:+919849340257">098493 40257</a><small>Call · WhatsApp 98493 40257</small></div></div>
       </div>
       <div class="fact">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
@@ -456,11 +510,10 @@
           <span class="amenity"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>Nutrition guidance</span>
         </div>
       </div>
-      <div class="story__art" aria-hidden="true" data-reveal data-reveal-delay="2">
-        <div class="arch-frame arch-frame--solid"></div>
-        <div class="arch-frame arch-frame--outline">
-          <span class="story__monogram">A</span>
-        </div>
+      <div class="story__art" data-reveal data-reveal-delay="2">
+        <div class="story__photo" style="background-image:url('assets/img/src/w-trainer.jpg')" role="img" aria-label="Women training at the Attapur studio"></div>
+        <div class="story__frame" aria-hidden="true"></div>
+        <span class="story__monogram" aria-hidden="true">A</span>
         <div class="story__caption">
           <span class="micro">Attapur studio</span>
           <p>A short auto ride from Mehdipatnam and Tolichowki.</p>
@@ -479,42 +532,80 @@
         <p class="section-head__aside" data-reveal data-reveal-delay="2">Every programme below is included in a standard membership, unless marked as personal training. Ask the team what is running this week.</p>
       </div>
       <div class="programs">
-        <article class="program program--wide" data-reveal data-reveal-delay="0">
-          <div class="program__top">
-            <span class="program__no">01</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+        <article class="program program--wide program--photo" data-reveal data-reveal-delay="0">
+          <div class="program__bg" style="background-image:url('assets/img/src/w-lift.jpg')" aria-hidden="true"></div>
+          <div class="program__body">
+            <div class="program__top">
+              <span class="program__no">01</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+            </div>
+            <h3 class="program__title">Strength & conditioning</h3>
+            <p class="program__desc">A large free-weight floor with racks, cables and machines — and trainers who know the difference between sore and injured.</p>
+            <div class="program__tags"><span class="tag">Free weights</span><span class="tag">Machines</span></div>
           </div>
-          <h3 class="program__title">Strength & conditioning</h3>
-          <p class="program__desc">A large free-weight floor with racks, cables and machines — and trainers who know the difference between sore and injured.</p>
-          <div class="program__tags"><span class="tag">Free weights</span><span class="tag">Machines</span></div>
         </article>
-        <article class="program program--wide" data-reveal data-reveal-delay="1">
-          <div class="program__top">
-            <span class="program__no">02</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+        <article class="program program--wide program--photo" data-reveal data-reveal-delay="1">
+          <div class="program__bg" style="background-image:url('assets/img/src/w-class2.jpg')" aria-hidden="true"></div>
+          <div class="program__body">
+            <div class="program__top">
+              <span class="program__no">02</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+            </div>
+            <h3 class="program__title">Pilates & core</h3>
+            <p class="program__desc">Controlled, low-impact work for posture, deep core strength and recovery from desk-bound days.</p>
+            <div class="program__tags"><span class="tag">Posture</span><span class="tag">Low impact</span></div>
           </div>
-          <h3 class="program__title">Pilates & core</h3>
-          <p class="program__desc">Controlled, low-impact work for posture, deep core strength and recovery from desk-bound days.</p>
-          <div class="program__tags"><span class="tag">Posture</span><span class="tag">Low impact</span></div>
         </article>
-        <article class="program program--wide" data-reveal data-reveal-delay="0">
-          <div class="program__top">
-            <span class="program__no">03</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+        <article class="program program--wide program--photo" data-reveal data-reveal-delay="0">
+          <div class="program__bg" style="background-image:url('assets/img/src/w-group.jpg')" aria-hidden="true"></div>
+          <div class="program__body">
+            <div class="program__top">
+              <span class="program__no">03</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+            </div>
+            <h3 class="program__title">Zumba, yoga & aerobics</h3>
+            <p class="program__desc">The studio's group classes are the reason many members keep coming back through the week.</p>
+            <div class="program__tags"><span class="tag">Group energy</span></div>
           </div>
-          <h3 class="program__title">Zumba, yoga & aerobics</h3>
-          <p class="program__desc">The studio's group classes are the reason many members keep coming back through the week.</p>
-          <div class="program__tags"><span class="tag">Group energy</span></div>
         </article>
-        <article class="program program--wide" data-reveal data-reveal-delay="1">
-          <div class="program__top">
-            <span class="program__no">04</span>
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+        <article class="program program--wide program--photo" data-reveal data-reveal-delay="1">
+          <div class="program__bg" style="background-image:url('assets/img/src/w-trainer2.jpg')" aria-hidden="true"></div>
+          <div class="program__body">
+            <div class="program__top">
+              <span class="program__no">04</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m3 8.5 3 3 7-7"/></svg>
+            </div>
+            <h3 class="program__title">Sauna, steam & recovery</h3>
+            <p class="program__desc">Finish with heat, then a shower and a locker that is actually yours for the hour.</p>
+            <div class="program__tags"><span class="tag">Recovery</span><span class="tag">Lockers</span></div>
           </div>
-          <h3 class="program__title">Sauna, steam & recovery</h3>
-          <p class="program__desc">Finish with heat, then a shower and a locker that is actually yours for the hour.</p>
-          <div class="program__tags"><span class="tag">Recovery</span><span class="tag">Lockers</span></div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-reveal>Inside the studio</p>
+          <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">A look at the floor <em class="serif-italic">at Attapur.</em></h2>
+        </div>
+        <p class="section-head__aside" data-reveal data-reveal-delay="2">Real training, real women, real equipment. Come and see the floor for yourself on a free trial.</p>
+      </div>
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1" data-reveal data-reveal-delay="0">
+          <div class="gallery__img" style="background-image:url('assets/img/src/w-class2.jpg')" role="img" aria-label="Women training at Platinum Attapur"></div>
+          <figcaption><span class="micro">01 · Attapur</span><span>The strength floor</span></figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--2" data-reveal data-reveal-delay="1">
+          <div class="gallery__img" style="background-image:url('assets/img/src/w-group.jpg')" role="img" aria-label="Women training at Platinum Attapur"></div>
+          <figcaption><span class="micro">02 · Attapur</span><span>Trained by women</span></figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--3" data-reveal data-reveal-delay="2">
+          <div class="gallery__img" style="background-image:url('assets/img/src/w-trainer2.jpg')" role="img" aria-label="Women training at Platinum Attapur"></div>
+          <figcaption><span class="micro">03 · Attapur</span><span>A floor that is yours</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -550,7 +641,7 @@
           <div class="landmarks">
             <div class="landmark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 14s-5-4.4-5-8a5 5 0 0 1 10 0c0 3.6-5 8-5 8Z"/><circle cx="8" cy="6" r="1.6"/></svg><span>Opposite Pillar No. 151, first floor of Shree Bhagya Laxmi Plaza — above the shops, look for the Platinum board.</span></div>
             <div class="landmark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg><span>A short auto ride from Mehdipatnam and Tolichowki.</span></div>
-            <div class="landmark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.5 2.5 6 6 4.7 7a9 9 0 0 0 4.3 4.3L10 10l3.5 1.5v2a1.4 1.4 0 0 1-1.6 1.4A12 12 0 0 1 3.1 5.9 1.4 1.4 0 0 1 4.5 4.3Z"/></svg><span><a href="tel:+919849340257" style="border-bottom:1px solid var(--line-strong)">098493 40257</a> · call or WhatsApp before you visit</span></div>
+            <div class="landmark"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4.5 2.5 6 6 4.7 7a9 9 0 0 0 4.3 4.3L10 10l3.5 1.5v2a1.4 1.4 0 0 1-1.6 1.4A12 12 0 0 1 3.1 5.9 1.4 1.4 0 0 1 4.5 4.3Z"/></svg><span><a href="tel:+919849340257" style="border-bottom:1px solid var(--line-strong)">098493 40257</a> · WhatsApp 98493 40257</span></div>
           </div>
 
           <table class="hours-table" style="margin-top:28px">
@@ -653,10 +744,10 @@
       <div class="reviews">
         <article class="review" data-reveal data-reveal-delay="0">
           <span class="review__stars" aria-label="5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg></span>
-          <blockquote class="review__quote">“Good service with friendly staff and a super clean, comfortable gym.”</blockquote>
+          <blockquote class="review__quote">“Newly joined at Platinum Women Exclusive and I am absolutely loving it! Best ladies gym with such a positive, safe and comfortable environment. The gym is very clean and well-maintained with great equipment.”</blockquote>
           <div class="review__foot">
             <div>
-              <div class="review__who">Google member review</div>
+              <div class="review__who">Arefa Mohammadi</div>
               <div class="review__where">Attapur · Google</div>
             </div>
             <svg class="review__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23 12.2c0-.8-.1-1.6-.2-2.3H12v4.4h6.2a5.4 5.4 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.5Z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3A11.5 11.5 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.6 13.7a6.9 6.9 0 0 1 0-4.4v-3H1.8a11.5 11.5 0 0 0 0 10.4l3.8-3Z"/><path fill="#EA4335" d="M12 4.6c1.7 0 3.2.6 4.4 1.7l3.3-3.3A11.5 11.5 0 0 0 1.8 6.3l3.8 3C6.5 6.6 9 4.6 12 4.6Z"/></svg>
@@ -664,10 +755,10 @@
         </article>
         <article class="review" data-reveal data-reveal-delay="1">
           <span class="review__stars" aria-label="5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg></span>
-          <blockquote class="review__quote">“The best thing about this place is its ambience and the facilities they provide.”</blockquote>
+          <blockquote class="review__quote">“I had a really good experience at Platinum Gym! Raziya Parveen Ma’am is an amazing personal trainer — very supportive, motivating, patient, and dedicated.”</blockquote>
           <div class="review__foot">
             <div>
-              <div class="review__who">Google member review</div>
+              <div class="review__who">Sumaiya Firdous</div>
               <div class="review__where">Attapur · Google</div>
             </div>
             <svg class="review__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23 12.2c0-.8-.1-1.6-.2-2.3H12v4.4h6.2a5.4 5.4 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.5Z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3A11.5 11.5 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.6 13.7a6.9 6.9 0 0 1 0-4.4v-3H1.8a11.5 11.5 0 0 0 0 10.4l3.8-3Z"/><path fill="#EA4335" d="M12 4.6c1.7 0 3.2.6 4.4 1.7l3.3-3.3A11.5 11.5 0 0 0 1.8 6.3l3.8 3C6.5 6.6 9 4.6 12 4.6Z"/></svg>
@@ -675,7 +766,18 @@
         </article>
         <article class="review" data-reveal data-reveal-delay="2">
           <span class="review__stars" aria-label="5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg></span>
-          <blockquote class="review__quote">“The knowledgeable trainers and quality equipment make every workout a success.”</blockquote>
+          <blockquote class="review__quote">“I am 62 years old, and I joined this gym one month ago. I really like the environment here. It is comfortable, positive, and welcoming. As a senior, I feel comfortable and confident working out here.”</blockquote>
+          <div class="review__foot">
+            <div>
+              <div class="review__who">Shahnaz Parveen</div>
+              <div class="review__where">Attapur · Google</div>
+            </div>
+            <svg class="review__g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23 12.2c0-.8-.1-1.6-.2-2.3H12v4.4h6.2a5.4 5.4 0 0 1-2.3 3.5v2.9h3.7c2.2-2 3.4-5 3.4-8.5Z"/><path fill="#34A853" d="M12 23c3.1 0 5.7-1 7.6-2.8l-3.7-2.9c-1 .7-2.3 1.1-3.9 1.1-3 0-5.5-2-6.4-4.7H1.8v3A11.5 11.5 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.6 13.7a6.9 6.9 0 0 1 0-4.4v-3H1.8a11.5 11.5 0 0 0 0 10.4l3.8-3Z"/><path fill="#EA4335" d="M12 4.6c1.7 0 3.2.6 4.4 1.7l3.3-3.3A11.5 11.5 0 0 0 1.8 6.3l3.8 3C6.5 6.6 9 4.6 12 4.6Z"/></svg>
+          </div>
+        </article>
+        <article class="review" data-reveal data-reveal-delay="3">
+          <span class="review__stars" aria-label="5 out of 5"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg></span>
+          <blockquote class="review__quote">“The best thing about this place is its ambience and the facilities they provide.”</blockquote>
           <div class="review__foot">
             <div>
               <div class="review__who">Google member review</div>
@@ -703,7 +805,7 @@
         </details>
         <details>
           <summary>Is there a free trial? <span class="plus" aria-hidden="true"></span></summary>
-          <p>Yes — a free trial session with a body assessment. Call or WhatsApp 098493 40257 to book a slot, Monday to Saturday.</p>
+          <p>Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.</p>
         </details>
         <details>
           <summary>How do I reach the studio? <span class="plus" aria-hidden="true"></span></summary>
@@ -730,6 +832,7 @@
   </section>
 
   <section class="section section--tight cta-band grain">
+    <div class="cta-band__photo" style="background-image:url('assets/img/src/w-group.jpg')" aria-hidden="true"></div>
     <div class="cta-band__arches" aria-hidden="true">
       <svg width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" fill="none">
         <g stroke="#F7F3EC" stroke-opacity=".5">
@@ -744,8 +847,8 @@
         <p class="eyebrow" data-reveal style="color:#BFE3DC">Attapur · first session free</p>
         <h2 class="cta-band__title" data-reveal data-reveal-delay="1">Walk in once.<br>Decide after.</h2>
         <div class="cta-band__actions" data-reveal data-reveal-delay="2">
-          <a class="btn btn--light" href="https://wa.me/919849340257?text=Hi%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20the%20Attapur%20studio." target="_blank" rel="noopener">WhatsApp Attapur <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
-          <a class="btn btn--outline-light" href="tel:+919849340257">Call 098493 40257</a>
+          <button class="btn btn--light js-enquire" type="button">Quick enquiry <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+          <a class="btn btn--outline-light" href="https://wa.me/919849340257?text=Hi%2C%20I'd%20like%20to%20book%20a%20free%20trial%20at%20the%20Attapur%20studio." target="_blank" rel="noopener">WhatsApp us</a>
         </div>
       </div>
       <div class="cta-band__aside" data-reveal data-reveal-delay="3">
@@ -772,15 +875,7 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-          <svg class="brand__mark" viewBox="0 0 40 48" aria-hidden="true" fill="none">
-            <path d="M5 46V21.5C5 13.5 11.7 7 20 7s15 6.5 15 14.5V46" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M12 46V22.2c0-4.6 3.6-8.3 8-8.3s8 3.7 8 8.3V46" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
-            <circle cx="20" cy="29" r="2.6" fill="currentColor"/>
-          </svg>
-          <span class="brand__type">
-            <span class="brand__name">Platinum</span>
-            <span class="brand__sub">Fitness Club · Women Exclusive</span>
-          </span>
+          <img class="brand__logo brand__logo--footer" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
         </a>
         <p class="footer__blurb">A women-only fitness club in Hyderabad. Three studios, female trainers, and programmes built around real women's bodies and schedules.</p>
         <div class="footer__social">
@@ -841,6 +936,67 @@
     <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg>
     Directions
   </a>
+</div>
+
+<div class="enquiry" id="enquiry" aria-hidden="true">
+  <div class="enquiry__backdrop" data-enquiry-close></div>
+  <div class="enquiry__panel" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" aria-describedby="enquiry-desc">
+    <button class="enquiry__close" type="button" data-enquiry-close aria-label="Close enquiry form">&times;</button>
+    <div class="enquiry__head">
+      <img class="enquiry__logo" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="180" height="46">
+      <p class="eyebrow">Women-only · Hyderabad</p>
+      <h2 class="display-m" id="enquiry-title">Start with a <em class="serif-italic">conversation.</em></h2>
+      <p id="enquiry-desc">Tell us what you're looking for. Your answers open in WhatsApp, ready to send to 98493 40257.</p>
+    </div>
+    <form class="enquiry__form" id="enquiry-form">
+      <label>
+        <span>Your name</span>
+        <input type="text" name="name" autocomplete="name" placeholder="Your name" required>
+      </label>
+      <label>
+        <span>Studio</span>
+        <select name="branch" required>
+          <option value="malakpet">Malakpet</option>
+          <option value="attapur">Attapur</option>
+          <option value="saidabad">Saidabad</option>
+        </select>
+      </label>
+      <label>
+        <span>I'm interested in</span>
+        <select name="interest">
+          <option>Free trial &amp; body assessment</option>
+          <option>Membership / 3 months + 1 free</option>
+          <option>Strength &amp; conditioning</option>
+          <option>PCOS, thyroid or hormonal training</option>
+          <option>Pilates, yoga or classes at Malakpet / Attapur</option>
+          <option>Personal training</option>
+          <option>EMS training (Attapur only)</option>
+        </select>
+      </label>
+      <label>
+        <span>Anything else?</span>
+        <textarea name="message" rows="3" placeholder="Your goals, age group, health considerations…"></textarea>
+      </label>
+      <button class="btn btn--teal enquiry__submit" type="submit">
+        Continue to WhatsApp
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </button>
+      <a class="enquiry__fallback" id="enquiry-fallback" href="https://wa.me/919849340257" target="_blank" rel="noopener">WhatsApp only · 98493 40257 ↗</a>
+    </form>
+  </div>
+</div>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__side intro__side--dark">
+    <img class="intro__logo" src="assets/img/src/logo-full.png" alt="" width="320" height="82">
+    <span class="intro__label">Platinum Fitness Club</span>
+  </div>
+  <div class="intro__side intro__side--cream">
+    <img class="intro__logo" src="assets/img/src/logo-black.png" alt="" width="320" height="82">
+    <span class="intro__label">Women Exclusive · Hyderabad</span>
+  </div>
+  <div class="intro__rule" aria-hidden="true"></div>
+  <button class="intro__skip" type="button">Skip intro</button>
 </div>
 <script src="assets/js/main.js" defer></script>
 </body>

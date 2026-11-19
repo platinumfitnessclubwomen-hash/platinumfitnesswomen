@@ -7,11 +7,15 @@ import { writeFileSync } from 'node:fs';
 
 const BASE = 'https://platinumfitnessclubwomen-hash.github.io/platinumfitnesswomen';
 const BRAND = 'Platinum Fitness Club — Women Exclusive';
+const WA = '919849340257';
+const WA_DISPLAY = '98493 40257';
 
 const stars = (n = 5) =>
   Array.from({ length: n }, () =>
     '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .9-5.2 4.9 1.4 7L12 18l-6.2 3.4 1.4-7L2 9.5l7-.9Z"/></svg>'
   ).join('');
+
+const photo = (name) => `assets/img/src/${name}.jpg`;
 
 const fmt12 = (t) => {
   const [h, m] = t.split(':').map(Number);
@@ -35,6 +39,12 @@ const branches = [
     slug: 'malakpet',
     short: 'Malakpet',
     initials: 'M',
+    img: {
+      hero: 'assets/img/src/w-power.jpg',
+      story: 'assets/img/src/w-weights.jpg',
+      work: ['w-latpull', 'w-class1', 'w-incl', 'w-senior1'],
+      gallery: ['w-trainer', 'w-class1', 'w-senior2']
+    },
     title: "Women's Gym in Malakpet, Hyderabad | Platinum Fitness Club Women Exclusive",
     meta: 'Women-only gym in Malakpet, Hyderabad — 4.7 from 307 Google reviews and 500+ active members. Clinically informed training for every age: PCOS, thyroid, menopause, post-partum and joint-friendly. Free trial.',
     rating: '4.7',
@@ -42,7 +52,7 @@ const branches = [
     members: '500+',
     phoneDisplay: '092810 22896',
     phoneRaw: '+919281022896',
-    wa: '919281022896',
+    wa: WA,
     open: '06:00',
     close: '21:00',
     closeLabel: '9:00 pm',
@@ -61,7 +71,7 @@ const branches = [
       'The Malakpet studio is the club\'s city-side home: a full floor of strength and cardio equipment, a dedicated space for group classes, and separate changing rooms with lockers and showers. Being a minute from Malakpet metro makes it the easiest studio to reach before work or after a late shift.',
       'Trainers here run a high proportion of PCOS and thyroid programmes, and the early-morning crowd is a fixture. If you have been meaning to start but keep putting it off until "next month", this is the studio to walk into on a Monday.'
     ],
-    amenities: ['Female trainers', 'EMS training', 'Pilates & yoga', 'Zumba & aerobics', 'Cardio zone', 'Sauna & steam', 'Lockers & showers', 'PCOS & thyroid care'],
+    amenities: ['Female trainers', 'Pilates & yoga', 'Zumba & aerobics', 'Cardio zone', 'Sauna & steam', 'Lockers & showers', 'PCOS & thyroid care'],
     reasons: [
       ['A minute from the metro', 'Opposite Metro Pillar 1456, on the first floor of the Zudio building — easy before work, after college, or on the way home.'],
       ['Clinically informed, at every age', 'PCOS, thyroid, diabetes and joint-friendly programmes, scaled from first-timers in their twenties to women in their sixties.'],
@@ -75,17 +85,18 @@ const branches = [
     programmes: [
       { title: 'Strength & conditioning', desc: 'Free weights, racks and machines with a female trainer checking form, not just counting reps.', tags: ['Free weights', 'Form coaching'] },
       { title: 'PCOS & thyroid programmes', desc: 'Strength-first plans built around insulin resistance, fatigue and hormonal weight gain.', tags: ['PCOS', 'Thyroid'] },
-      { title: 'EMS in 20 minutes', desc: 'A full-body session for the days when an hour at the gym is not going to happen.', tags: ['Low impact', 'Time-efficient'] },
+      { title: 'Sauna, steam & recovery', desc: 'Finish with heat, then a shower and a locker that is actually yours for the hour.', tags: ['Recovery', 'Lockers'] },
       { title: 'Cardio & group classes', desc: 'Treadmills, cross trainers and cycles, plus yoga, Zumba and aerobics through the week.', tags: ['Heart health', 'Group energy'] }
     ],
     quotes: [
-      { text: 'Hygienic, professional trainers, very comfortable environment to work out.', who: 'Hoor Banu' },
-      { text: 'The facilities are generally clean, and the staff are friendly and helpful.', who: 'Google member review' },
-      { text: 'Excellent gym ambience and peaceful place to do your workouts.', who: 'Google member review' }
+      { text: 'The equipment is clean and well-maintained, the staff is incredibly friendly and helpful … the atmosphere is motivating without being intimidating. I highly recommend it.', who: 'Hoor Banu', rating: 5 },
+      { text: 'The environment is safe, clean, and truly motivating for women of all fitness levels. A special shoutout to Trainer Raziya, who is understanding, approachable, and truly one of the best trainers.', who: 'Sudeeksha Thota', rating: 5 },
+      { text: 'Hygienic, professional trainers, very comfortable environment to workout.', who: 'Google member review', rating: 5 },
+      { text: 'Excellent gym ambience and peaceful place to do your workouts.', who: 'Google member review', rating: 5 }
     ],
     faq: [
       ['What are the Malakpet studio timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call or WhatsApp 092810 22896 to book a slot, Monday to Saturday.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
       ['How do I reach the studio?', 'We are on the first floor of the Zudio building, opposite Metro Pillar No. 1456 in Anand Nagar Colony. Malakpet metro station is a short walk away.'],
       ['Do you have women trainers?', 'Yes. Our floor trainers are women, and they lead the strength, PCOS and thyroid programmes.'],
       ['Which areas do you serve?', 'Members travel to us from Malakpet, Dilsukhnagar, Santoshnagar, LB Nagar, Koti, Chaderghat, Moosarambagh, Amberpet and Saidabad.'],
@@ -97,6 +108,12 @@ const branches = [
     slug: 'attapur',
     short: 'Attapur',
     initials: 'A',
+    img: {
+      hero: 'assets/img/src/w-group.jpg',
+      story: 'assets/img/src/w-trainer.jpg',
+      work: ['w-lift', 'w-class2', 'w-group', 'w-trainer2'],
+      gallery: ['w-class2', 'w-group', 'w-trainer2']
+    },
     title: "Women's Gym in Attapur, Hyderabad | Platinum Fitness Club Women Exclusive",
     meta: 'Women-only gym in Attapur, Hyderabad — 4.9 from 666 Google reviews and 500+ active members. Clinically informed training for every age: PCOS, thyroid, menopause, post-partum and joint-friendly. Free trial.',
     rating: '4.9',
@@ -104,7 +121,7 @@ const branches = [
     members: '500+',
     phoneDisplay: '098493 40257',
     phoneRaw: '+919849340257',
-    wa: '919849340257',
+    wa: WA,
     open: '06:00',
     close: '21:00',
     closeLabel: '9:00 pm',
@@ -141,13 +158,14 @@ const branches = [
       { title: 'Sauna, steam & recovery', desc: 'Finish with heat, then a shower and a locker that is actually yours for the hour.', tags: ['Recovery', 'Lockers'] }
     ],
     quotes: [
-      { text: 'Good service with friendly staff and a super clean, comfortable gym.', who: 'Google member review' },
-      { text: 'The best thing about this place is its ambience and the facilities they provide.', who: 'Google member review' },
-      { text: 'The knowledgeable trainers and quality equipment make every workout a success.', who: 'Google member review' }
+      { text: 'Newly joined at Platinum Women Exclusive and I am absolutely loving it! Best ladies gym with such a positive, safe and comfortable environment. The gym is very clean and well-maintained with great equipment.', who: 'Arefa Mohammadi', rating: 5 },
+      { text: 'I had a really good experience at Platinum Gym! Raziya Parveen Ma’am is an amazing personal trainer — very supportive, motivating, patient, and dedicated.', who: 'Sumaiya Firdous', rating: 5 },
+      { text: 'I am 62 years old, and I joined this gym one month ago. I really like the environment here. It is comfortable, positive, and welcoming. As a senior, I feel comfortable and confident working out here.', who: 'Shahnaz Parveen', rating: 5 },
+      { text: 'The best thing about this place is its ambience and the facilities they provide.', who: 'Google member review', rating: 5 }
     ],
     faq: [
       ['What are the Attapur studio timings?', 'Monday to Saturday, 6:00 am to 9:00 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call or WhatsApp 098493 40257 to book a slot, Monday to Saturday.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
       ['How do I reach the studio?', 'We are on the first floor of Shree Bhagya Laxmi Plaza, opposite Pillar No. 151 in Attapur. Look for the Platinum board above the shops.'],
       ['Do you have Pilates and sauna?', 'Yes. Pilates and core work are part of the class schedule, and sauna and steam are available as recovery facilities. Confirm current class timings with the studio.'],
       ['Which areas do you serve?', 'Members travel to us from Attapur, Mehdipatnam, Tolichowki, Rajendranagar, Langar Houz, Gudimalkapur, Hyderguda and Bandlaguda.'],
@@ -159,14 +177,20 @@ const branches = [
     slug: 'saidabad',
     short: 'Saidabad',
     initials: 'S',
+    img: {
+      hero: 'assets/img/src/w-cardio.jpg',
+      story: 'assets/img/src/w-bike.jpg',
+      work: ['w-weights', 'w-cardio', 'w-latpull', 'w-bike'],
+      gallery: ['w-cardio', 'w-bike', 'w-incl']
+    },
     title: "Women's Gym in Saidabad, Hyderabad | Neo Platinum Fitness Club Women Exclusive",
-    meta: 'Women-only gym in Saidabad, Hyderabad — 5.0 from 40 Google reviews and 500+ active members. New equipment, clinically informed training for every age, female trainers. Free trial & body assessment.',
+    meta: 'Women-only gym in Saidabad, Hyderabad — 5.0 from 40 Google reviews and 500+ active members. Gym-only floor with new equipment, personal training and female trainers. No group classes. Free trial & body assessment.',
     rating: '5.0',
     reviews: '40',
     members: '500+',
     phoneDisplay: '092810 22891',
     phoneRaw: '+919281022891',
-    wa: '919281022891',
+    wa: WA,
     open: '06:15',
     close: '20:30',
     closeLabel: '8:30 pm',
@@ -180,12 +204,12 @@ const branches = [
     landmark: 'Above Ratnadeep Supermarket on the first floor, at Zahoor Bagh — the entrance is from the Shankeshwar Bazar side.',
     metro: 'A short ride from Dilsukhnagar and Malakpet.',
     nearby: ['Saidabad', 'Saroornagar', 'Dilsukhnagar', 'Madannapet', 'Champapet', 'Kothapet', 'Malakpet', 'Asmangadh'],
-    intro: 'Our newest studio, above Ratnadeep Supermarket in Saidabad — 5.0 from 40 reviews, with new equipment and a calmer floor.',
+    intro: 'Our newest studio, above Ratnadeep Supermarket in Saidabad — 5.0 from 40 reviews, with new equipment and a calmer floor. Saidabad is a gym-only floor: no group classes, just equipment, space and trainers.',
     story: [
       'Saidabad opened most recently, which means the equipment is new, the floor is quiet, and the trainers have time for women who are just starting. It is smaller and calmer than Attapur — many members describe it as the easiest place to begin.',
-      'Being above Ratnadeep means errands and a workout fit into one trip. Come in the morning for a nearly empty floor, or in the early evening for the small-group classes.'
+      'Being above Ratnadeep means errands and a workout fit into one trip. Come in the morning for a nearly empty floor, or in the early evening for a one-to-one session. There are no group classes on this floor — the equipment is yours when you need it.'
     ],
-    amenities: ['Female trainers', 'New equipment', 'EMS training', 'Yoga & Pilates', 'Strength & cardio', 'Personal training', 'Lockers & showers', 'PCOS & thyroid care'],
+    amenities: ['Female trainers', 'New equipment', 'Strength & cardio', 'Personal training', '1:1 mobility work', 'Lockers & showers', 'PCOS & thyroid care'],
     reasons: [
       ['New equipment, quieter floor', 'Our newest studio means newer machines, a calmer floor and more of a trainer\'s time — particularly in the morning.'],
       ['The easiest place to begin', 'Many members start here. Personal training is available for the first few weeks if you would like someone beside you.'],
@@ -199,19 +223,21 @@ const branches = [
     programmes: [
       { title: 'Personal training', desc: 'One-to-one coaching for your first three months — the fastest way to learn the machines and build a habit.', tags: ['1:1', 'Beginners'] },
       { title: 'Strength for beginners', desc: 'A gentle, progressive introduction to weights, with a trainer beside you for the first sessions.', tags: ['Beginners', 'Form coaching'] },
-      { title: 'Yoga & mobility', desc: 'Small-group sessions for mobility, posture and the kind of calm that a busy week takes away.', tags: ['Mobility', 'Small group'] },
-      { title: 'EMS in 20 minutes', desc: 'A low-impact, full-body session for tight schedules and joints that prefer not to run.', tags: ['Low impact', '20 minutes'] }
+      { title: 'Mobility & stretching', desc: 'One-to-one mobility and stretching work for posture, joints and the kind of calm a busy week takes away.', tags: ['1:1', 'Mobility'] },
+      { title: 'Cardio & conditioning', desc: 'Treadmills, cross trainers and cycles for heart health and stamina, with a trainer on hand to set the pace.', tags: ['Cardio', 'All ages'] }
     ],
     quotes: [
-      { text: 'The staff and trainers are extremely supportive and motivating.', who: 'Google member review' },
-      { text: 'A newly opened place with a very positive and comfortable atmosphere.', who: 'Google member review' },
-      { text: 'Excellent gym with top-notch equipment and very flexible timings. For working ladies, it is ideal.', who: 'Hena Maryam' }
+      { text: 'Excellent gym with top-notch equipment and very flexible timings! The machines are all well-maintained and modern, perfect for both beginners and pros. Trainers are supportive and the atmosphere is very motivating.', who: 'Hena marryam', rating: 5 },
+      { text: 'Feeling so delighted and healthy after joining here — from equipment to ambience everything is modern, the trainers and staff are also so knowledgeable and approachable. I definitely recommend to everyone.', who: 'porika shilpa', rating: 5 },
+      { text: 'Really enjoying my experience here so far! The gym has a very comfortable and welcoming atmosphere with a clean, spacious and well-maintained environment. Even though I travel around 20 minutes to get here, I genuinely feel it’s worth the journey.', who: 'Hari Priya', rating: 5 },
+      { text: 'A newly opened place with a very positive and comfortable atmosphere.', who: 'Google member review', rating: 5 }
     ],
     faq: [
       ['What are the Saidabad studio timings?', 'Monday to Saturday, 6:15 am to 8:30 pm. The studio is closed on Sundays.'],
-      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call or WhatsApp 092810 22891 to book a slot, Monday to Saturday.'],
+      ['Is there a free trial?', 'Yes — a free trial session with a body assessment. Call the studio or WhatsApp 98493 40257 to book a slot, Monday to Saturday.'],
       ['How do I reach the studio?', 'We are on the first floor above Ratnadeep Supermarket at Zahoor Bagh, Shankeshwar Bazar, Saidabad. The entrance is from the Shankeshwar Bazar side.'],
       ['Is this a good studio for beginners?', 'Yes. Saidabad is our newest and calmest floor, and personal training is available if you would like a trainer beside you for the first few weeks.'],
+      ['Do you run group classes at Saidabad?', 'No. Saidabad is a gym-only studio with no group classes on the floor. What you get is a quiet, well-equipped gym with female trainers, strength and cardio machines, personal training and one-to-one mobility work. If you want yoga, Pilates, Zumba or aerobics classes, our Malakpet and Attapur studios run those through the week.'],
       ['Which areas do you serve?', 'Members travel to us from Saidabad, Saroornagar, Dilsukhnagar, Madannapet, Champapet, Kothapet, Malakpet and Asmangadh.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties, and the studio is a particularly easy place for beginners. Every programme is scaled to age, experience and medical history.'],
       ['Is the training clinically informed?', 'Yes — PCOS, thyroid, post-partum, menopause and joint-friendly programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
@@ -219,20 +245,75 @@ const branches = [
   }
 ];
 
+const enquiryModal = () => `
+<div class="enquiry" id="enquiry" aria-hidden="true">
+  <div class="enquiry__backdrop" data-enquiry-close></div>
+  <div class="enquiry__panel" role="dialog" aria-modal="true" aria-labelledby="enquiry-title" aria-describedby="enquiry-desc">
+    <button class="enquiry__close" type="button" data-enquiry-close aria-label="Close enquiry form">&times;</button>
+    <div class="enquiry__head">
+      <img class="enquiry__logo" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="180" height="46">
+      <p class="eyebrow">Women-only · Hyderabad</p>
+      <h2 class="display-m" id="enquiry-title">Start with a <em class="serif-italic">conversation.</em></h2>
+      <p id="enquiry-desc">Tell us what you're looking for. Your answers open in WhatsApp, ready to send to ${WA_DISPLAY}.</p>
+    </div>
+    <form class="enquiry__form" id="enquiry-form">
+      <label>
+        <span>Your name</span>
+        <input type="text" name="name" autocomplete="name" placeholder="Your name" required>
+      </label>
+      <label>
+        <span>Studio</span>
+        <select name="branch" required>
+          <option value="malakpet">Malakpet</option>
+          <option value="attapur">Attapur</option>
+          <option value="saidabad">Saidabad</option>
+        </select>
+      </label>
+      <label>
+        <span>I'm interested in</span>
+        <select name="interest">
+          <option>Free trial &amp; body assessment</option>
+          <option>Membership / 3 months + 1 free</option>
+          <option>Strength &amp; conditioning</option>
+          <option>PCOS, thyroid or hormonal training</option>
+          <option>Pilates, yoga or classes at Malakpet / Attapur</option>
+          <option>Personal training</option>
+          <option>EMS training (Attapur only)</option>
+        </select>
+      </label>
+      <label>
+        <span>Anything else?</span>
+        <textarea name="message" rows="3" placeholder="Your goals, age group, health considerations…"></textarea>
+      </label>
+      <button class="btn btn--teal enquiry__submit" type="submit">
+        Continue to WhatsApp
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </button>
+      <a class="enquiry__fallback" id="enquiry-fallback" href="https://wa.me/${WA}" target="_blank" rel="noopener">WhatsApp only · ${WA_DISPLAY} ↗</a>
+    </form>
+  </div>
+</div>`;
+
+const introScene = () => `
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__side intro__side--dark">
+    <img class="intro__logo" src="assets/img/src/logo-full.png" alt="" width="320" height="82">
+    <span class="intro__label">Platinum Fitness Club</span>
+  </div>
+  <div class="intro__side intro__side--cream">
+    <img class="intro__logo" src="assets/img/src/logo-black.png" alt="" width="320" height="82">
+    <span class="intro__label">Women Exclusive · Hyderabad</span>
+  </div>
+  <div class="intro__rule" aria-hidden="true"></div>
+  <button class="intro__skip" type="button">Skip intro</button>
+</div>`;
+
 const header = (branch) => `
 <a class="skip" href="#main">Skip to content</a>
 <header class="header header--over-hero" id="site-header">
   <div class="wrap header__inner">
     <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-      <svg class="brand__mark" viewBox="0 0 40 48" aria-hidden="true" fill="none">
-        <path d="M5 46V21.5C5 13.5 11.7 7 20 7s15 6.5 15 14.5V46" stroke="currentColor" stroke-width="1.4"/>
-        <path d="M12 46V22.2c0-4.6 3.6-8.3 8-8.3s8 3.7 8 8.3V46" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
-        <circle cx="20" cy="29" r="2.6" fill="currentColor"/>
-      </svg>
-      <span class="brand__type">
-        <span class="brand__name">Platinum</span>
-        <span class="brand__sub">Fitness Club · Women Exclusive</span>
-      </span>
+      <img class="brand__logo" src="assets/img/src/logo-full.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
     </a>
     <nav class="nav" aria-label="Primary">
       <a class="nav__link" href="index.html">Home</a>
@@ -247,7 +328,7 @@ const header = (branch) => `
         ${ico.phone}
         ${branch.phoneDisplay}
       </a>
-      <a class="btn btn--ghost btn--sm" href="https://wa.me/${branch.wa}?text=${encodeURIComponent(`Hi, I'd like to book a free trial at the ${branch.short} studio.`)}" target="_blank" rel="noopener">Free trial</a>
+      <button class="btn btn--ghost btn--sm js-enquire" type="button">Enquire</button>
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
     </div>
   </div>
@@ -261,6 +342,9 @@ const header = (branch) => `
     <a class="drawer__link" href="saidabad.html"><span>04</span>Saidabad</a>
     <a class="drawer__link" href="index.html#membership"><span>05</span>Membership</a>
   </nav>
+  <div class="drawer__brand">
+    <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="190" height="48">
+  </div>
   <div class="drawer__foot">
     <p class="micro" style="color:var(--muted-light)">${branch.short} · Women-only</p>
     <a class="drawer__phone" href="tel:${branch.phoneRaw}">${branch.phoneDisplay}</a>
@@ -273,15 +357,7 @@ const footer = (branch) => `
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand" href="index.html" aria-label="Platinum Fitness Club Women Exclusive — home">
-          <svg class="brand__mark" viewBox="0 0 40 48" aria-hidden="true" fill="none">
-            <path d="M5 46V21.5C5 13.5 11.7 7 20 7s15 6.5 15 14.5V46" stroke="currentColor" stroke-width="1.4"/>
-            <path d="M12 46V22.2c0-4.6 3.6-8.3 8-8.3s8 3.7 8 8.3V46" stroke="currentColor" stroke-width="1.4" opacity=".45"/>
-            <circle cx="20" cy="29" r="2.6" fill="currentColor"/>
-          </svg>
-          <span class="brand__type">
-            <span class="brand__name">Platinum</span>
-            <span class="brand__sub">Fitness Club · Women Exclusive</span>
-          </span>
+          <img class="brand__logo brand__logo--footer" src="assets/img/src/logo-black.png" alt="Platinum Fitness Club Women Exclusive" width="200" height="52">
         </a>
         <p class="footer__blurb">A women-only fitness club in Hyderabad. Three studios, female trainers, and programmes built around real women's bodies and schedules.</p>
         <div class="footer__social">
@@ -387,10 +463,24 @@ function page(b) {
           }
         ],
         aggregateRating: { '@type': 'AggregateRating', ratingValue: b.rating, reviewCount: b.reviews, bestRating: '5' },
+        review: b.quotes.map((q) => ({
+          '@type': 'Review',
+          author: { '@type': 'Person', name: q.who },
+          reviewRating: { '@type': 'Rating', ratingValue: String(q.rating || 5), bestRating: '5' },
+          reviewBody: q.text
+        })),
         amenityFeature: b.amenities.map((a) => ({ '@type': 'LocationFeatureSpecification', name: a, value: true })),
         areaServed: b.nearby.map((n) => ({ '@type': 'Place', name: n })),
         slogan: 'Women exclusive. Every age.',
-        knowsAbout: ['Clinical fitness', 'PCOS training', 'Thyroid friendly training', 'Menopause and bone health', 'Post-partum recovery', 'Strength training for women', 'EMS training'],
+        knowsAbout: [
+          'Clinical fitness',
+          'PCOS training',
+          'Thyroid friendly training',
+          'Menopause and bone health',
+          'Post-partum recovery',
+          'Strength training for women',
+          ...(b.slug === 'attapur' ? ['EMS training'] : [])
+        ],
         additionalProperty: [
           { '@type': 'PropertyValue', name: 'Active members', value: b.members },
           { '@type': 'PropertyValue', name: 'Minimum age', value: '18' }
@@ -479,6 +569,7 @@ ${header(b)}
 <main id="main">
 
   <section class="branch-hero grain">
+    <div class="branch-hero__photo" style="background-image:url('${b.img.hero}')" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="wrap branch-hero__inner">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -516,6 +607,10 @@ ${header(b)}
         </div>
 
         <aside class="branch-panel" data-reveal data-reveal-delay="2" aria-label="Studio details">
+          <div class="branch-panel__brand">
+            <img class="brand__logo" src="assets/img/src/logo-black.png" alt="" width="180" height="46">
+            <span class="micro">${b.short} studio</span>
+          </div>
           <dl style="margin:0">
             <div class="branch-panel__row">
               <dt>Rating</dt>
@@ -556,7 +651,7 @@ ${header(b)}
       </div>
       <div class="fact">
         ${ico.phone}
-        <div><div class="fact__k">Direct line</div><div class="fact__v"><a href="tel:${b.phoneRaw}">${b.phoneDisplay}</a><small>Call or WhatsApp</small></div></div>
+        <div><div class="fact__k">Direct line</div><div class="fact__v"><a href="tel:${b.phoneRaw}">${b.phoneDisplay}</a><small>Call · WhatsApp ${WA_DISPLAY}</small></div></div>
       </div>
       <div class="fact">
         ${ico.check}
@@ -581,11 +676,10 @@ ${header(b)}
           ${b.amenities.map((a) => `<span class="amenity">${ico.check}${a}</span>`).join('\n          ')}
         </div>
       </div>
-      <div class="story__art" aria-hidden="true" data-reveal data-reveal-delay="2">
-        <div class="arch-frame arch-frame--solid"></div>
-        <div class="arch-frame arch-frame--outline">
-          <span class="story__monogram">${b.initials}</span>
-        </div>
+      <div class="story__art" data-reveal data-reveal-delay="2">
+        <div class="story__photo" style="background-image:url('${b.img.story}')" role="img" aria-label="Women training at the ${b.short} studio"></div>
+        <div class="story__frame" aria-hidden="true"></div>
+        <span class="story__monogram" aria-hidden="true">${b.initials}</span>
         <div class="story__caption">
           <span class="micro">${b.short} studio</span>
           <p>${b.metro}</p>
@@ -606,15 +700,40 @@ ${header(b)}
       <div class="programs">
         ${b.programmes
           .map(
-            (p, i) => `<article class="program program--wide" data-reveal data-reveal-delay="${i % 2}">
-          <div class="program__top">
-            <span class="program__no">0${i + 1}</span>
-            ${ico.check}
+            (p, i) => `<article class="program program--wide program--photo" data-reveal data-reveal-delay="${i % 2}">
+          <div class="program__bg" style="background-image:url('${photo(b.img.work[i])}')" aria-hidden="true"></div>
+          <div class="program__body">
+            <div class="program__top">
+              <span class="program__no">0${i + 1}</span>
+              ${ico.check}
+            </div>
+            <h3 class="program__title">${p.title}</h3>
+            <p class="program__desc">${p.desc}</p>
+            <div class="program__tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
           </div>
-          <h3 class="program__title">${p.title}</h3>
-          <p class="program__desc">${p.desc}</p>
-          <div class="program__tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
         </article>`
+          )
+          .join('\n        ')}
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery-section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow" data-reveal>Inside the studio</p>
+          <h2 class="display-l section-head__title" data-reveal data-reveal-delay="1">A look at the floor <em class="serif-italic">at ${b.short}.</em></h2>
+        </div>
+        <p class="section-head__aside" data-reveal data-reveal-delay="2">Real training, real women, real equipment. Come and see the floor for yourself on a free trial.</p>
+      </div>
+      <div class="gallery">
+        ${b.img.gallery
+          .map(
+            (g, i) => `<figure class="gallery__item gallery__item--${i + 1}" data-reveal data-reveal-delay="${i}">
+          <div class="gallery__img" style="background-image:url('${photo(g)}')" role="img" aria-label="Women training at Platinum ${b.short}"></div>
+          <figcaption><span class="micro">0${i + 1} · ${b.short}</span><span>${['The strength floor', 'Trained by women', 'A floor that is yours'][i]}</span></figcaption>
+        </figure>`
           )
           .join('\n        ')}
       </div>
@@ -652,7 +771,7 @@ ${header(b)}
           <div class="landmarks">
             <div class="landmark">${ico.pin}<span>${b.landmark}</span></div>
             <div class="landmark">${ico.north}<span>${b.metro}</span></div>
-            <div class="landmark">${ico.phone}<span><a href="tel:${b.phoneRaw}" style="border-bottom:1px solid var(--line-strong)">${b.phoneDisplay}</a> · call or WhatsApp before you visit</span></div>
+            <div class="landmark">${ico.phone}<span><a href="tel:${b.phoneRaw}" style="border-bottom:1px solid var(--line-strong)">${b.phoneDisplay}</a> · WhatsApp ${WA_DISPLAY}</span></div>
           </div>
 
           <table class="hours-table" style="margin-top:28px">
@@ -738,7 +857,7 @@ ${header(b)}
         ${b.quotes
           .map(
             (q, i) => `<article class="review" data-reveal data-reveal-delay="${i}">
-          <span class="review__stars" aria-label="5 out of 5">${stars(5)}</span>
+          <span class="review__stars" aria-label="${q.rating || 5} out of 5">${stars(q.rating || 5)}</span>
           <blockquote class="review__quote">“${q.text}”</blockquote>
           <div class="review__foot">
             <div>
@@ -776,6 +895,7 @@ ${header(b)}
   </section>
 
   <section class="section section--tight cta-band grain">
+    <div class="cta-band__photo" style="background-image:url('${b.img.hero}')" aria-hidden="true"></div>
     <div class="cta-band__arches" aria-hidden="true">
       <svg width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" fill="none">
         <g stroke="#F7F3EC" stroke-opacity=".5">
@@ -790,8 +910,8 @@ ${header(b)}
         <p class="eyebrow" data-reveal style="color:#BFE3DC">${b.short} · first session free</p>
         <h2 class="cta-band__title" data-reveal data-reveal-delay="1">Walk in once.<br>Decide after.</h2>
         <div class="cta-band__actions" data-reveal data-reveal-delay="2">
-          <a class="btn btn--light" href="${waUrl}" target="_blank" rel="noopener">WhatsApp ${b.short} ${ico.arrow}</a>
-          <a class="btn btn--outline-light" href="tel:${b.phoneRaw}">Call ${b.phoneDisplay}</a>
+          <button class="btn btn--light js-enquire" type="button">Quick enquiry ${ico.arrow}</button>
+          <a class="btn btn--outline-light" href="${waUrl}" target="_blank" rel="noopener">WhatsApp us</a>
         </div>
       </div>
       <div class="cta-band__aside" data-reveal data-reveal-delay="3">
@@ -813,6 +933,8 @@ ${header(b)}
 
 </main>
 ${footer(b)}
+${enquiryModal()}
+${introScene()}
 <script src="assets/js/main.js" defer></script>
 </body>
 </html>`;

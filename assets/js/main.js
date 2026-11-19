@@ -127,17 +127,154 @@
     el.textContent = new Date().getFullYear();
   });
 
-  /* ---------- Gentle hero parallax ---------- */
-  var glow = document.querySelector('.hero__glow');
-  if (glow && !reduceMotion && window.matchMedia('(min-width: 981px)').matches) {
-    var raf = null;
-    window.addEventListener('scroll', function () {
-      if (raf) return;
-      raf = window.requestAnimationFrame(function () {
-        var y = Math.min(window.scrollY, 700);
-        glow.style.transform = 'translate3d(0,' + (y * 0.12) + 'px,0)';
-        raf = null;
+  /* ---------- Scroll progress ---------- */
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  document.body.prepend(progress);
+  var updateProgress = function () {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* ---------- Gallery: gentle scroll parallax + lightbox ---------- */
+  var galleryImgs = Array.prototype.slice.call(document.querySelectorAll('.gallery__img'));
+  if (galleryImgs.length && !reduceMotion) {
+    var galleryRaf = null;
+    var moveGallery = function () {
+      var vh = window.innerHeight;
+      galleryImgs.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -100 || r.top > vh + 100) return;
+        var progress = (r.top + r.height / 2 - vh / 2) / vh;
+        el.style.backgroundPositionY = Math.max(38, Math.min(62, 50 - progress * 9)) + '%';
       });
+      galleryRaf = null;
+    };
+    window.addEventListener('scroll', function () {
+      if (galleryRaf) return;
+      galleryRaf = window.requestAnimationFrame(moveGallery);
     }, { passive: true });
+    moveGallery();
+  }
+
+  var lightbox = null;
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.remove();
+    lightbox = null;
+    document.body.classList.remove('overlay-open');
+    document.removeEventListener('keydown', onLightboxKey);
+  }
+  function onLightboxKey(e) { if (e.key === 'Escape') closeLightbox(); }
+
+  document.querySelectorAll('.gallery__item').forEach(function (item) {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'View photograph full size');
+    var open = function () {
+      var src = item.querySelector('.gallery__img');
+      if (!src) return;
+      var bg = src.style.backgroundImage;
+      lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = '<button class="lightbox__close" type="button" aria-label="Close photograph">&times;</button><div class="lightbox__img" style="' + bg + '"></div>';
+      document.body.appendChild(lightbox);
+      document.body.classList.add('overlay-open');
+      lightbox.addEventListener('click', closeLightbox);
+      lightbox.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', onLightboxKey);
+      lightbox.querySelector('.lightbox__close').focus();
+    };
+    item.addEventListener('click', open);
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  /* ---------- WhatsApp enquiry popup ---------- */
+  var enquiry = document.getElementById('enquiry');
+  var enquiryForm = document.getElementById('enquiry-form');
+  var lastEnquiryFocus = null;
+
+  function openEnquiry() {
+    if (!enquiry) return;
+    lastEnquiryFocus = document.activeElement;
+    var branch = (document.body.getAttribute('data-page') || '').toLowerCase();
+    var select = enquiryForm && enquiryForm.querySelector('select[name="branch"]');
+    if (select && ['malakpet', 'attapur', 'saidabad'].indexOf(branch) > -1) select.value = branch;
+    enquiry.classList.add('is-open');
+    enquiry.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('overlay-open');
+    var first = enquiryForm && enquiryForm.querySelector('input[name="name"]');
+    if (first) first.focus();
+  }
+
+  function closeEnquiry() {
+    if (!enquiry || !enquiry.classList.contains('is-open')) return;
+    enquiry.classList.remove('is-open');
+    enquiry.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('overlay-open');
+    if (lastEnquiryFocus && lastEnquiryFocus.focus) lastEnquiryFocus.focus();
+  }
+
+  document.querySelectorAll('.js-enquire').forEach(function (btn) {
+    btn.addEventListener('click', openEnquiry);
+  });
+  if (enquiry) {
+    enquiry.querySelectorAll('[data-enquiry-close]').forEach(function (el) {
+      el.addEventListener('click', closeEnquiry);
+    });
+  }
+
+  if (enquiryForm) {
+    enquiryForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(enquiryForm);
+      var name = String(data.get('name') || '').trim();
+      var branch = String(data.get('branch') || '').trim();
+      var interest = String(data.get('interest') || '').trim();
+      var message = String(data.get('message') || '').trim();
+      var text =
+        'Hi Platinum Fitness Club, I would like to enquire.\n' +
+        'Name: ' + name + '\n' +
+        'Studio: ' + branch + '\n' +
+        'Interested in: ' + interest +
+        (message ? '\nMessage: ' + message : '');
+      var url = 'https://wa.me/919849340257?text=' + encodeURIComponent(text);
+      var fallback = document.getElementById('enquiry-fallback');
+      if (fallback) fallback.href = url;
+      window.open(url, '_blank', 'noopener');
+      closeEnquiry();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { closeEnquiry(); closeLightbox(); }
+  });
+
+  /* ---------- Opening scene ---------- */
+  var intro = document.getElementById('intro');
+  if (intro) {
+    var seenIntro = false;
+    try { seenIntro = window.sessionStorage.getItem('pf-intro') === '1'; } catch (err) {}
+    if (seenIntro) {
+      intro.remove();
+    } else {
+      var finishIntro = function () {
+        if (!intro || intro.classList.contains('is-done')) return;
+        intro.classList.add('is-done');
+        try { window.sessionStorage.setItem('pf-intro', '1'); } catch (err) {}
+        window.setTimeout(function () { if (intro && intro.remove) intro.remove(); }, 750);
+      };
+      var skip = intro.querySelector('.intro__skip');
+      if (skip) skip.addEventListener('click', finishIntro);
+      intro.addEventListener('click', function (e) {
+        if (e.target === intro) finishIntro();
+      });
+      window.setTimeout(finishIntro, reduceMotion ? 500 : 2600);
+    }
   }
 })();
