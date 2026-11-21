@@ -548,7 +548,7 @@ function page(b) {
 <meta name="description" content="${b.meta}">
 <link rel="canonical" href="${url}">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#0A1211">
+<meta name="theme-color" content="#160F1A">
 <meta name="geo.region" content="IN-TG">
 <meta name="geo.placename" content="${b.locality}, Hyderabad">
 <meta name="geo.position" content="${b.geo.lat};${b.geo.lng}">
@@ -912,7 +912,7 @@ ${header(b)}
     <div class="cta-band__photo" style="background-image:url('${b.img.hero}')" aria-hidden="true"></div>
     <div class="cta-band__arches" aria-hidden="true">
       <svg width="100%" height="100%" viewBox="0 0 1400 500" preserveAspectRatio="xMidYMid slice" fill="none">
-        <g stroke="#F7F3EC" stroke-opacity=".5">
+        <g stroke="#FBF5F2" stroke-opacity=".5">
           <path d="M1050 500V250a150 150 0 0 1 300 0v250"/>
           <path d="M1110 500V252a90 90 0 0 1 180 0v248"/>
           <path d="M1170 500V254a30 30 0 0 1 60 0v246"/>
@@ -921,7 +921,7 @@ ${header(b)}
     </div>
     <div class="wrap cta-band__inner">
       <div>
-        <p class="eyebrow" data-reveal style="color:#BFE3DC">${b.short} · first session free</p>
+        <p class="eyebrow" data-reveal style="color:#F6D3DC">${b.short} · first session free</p>
         <h2 class="cta-band__title" data-reveal data-reveal-delay="1">Walk in once.<br>Decide after.</h2>
         <div class="cta-band__actions" data-reveal data-reveal-delay="2">
           <button class="btn btn--light js-enquire" type="button">Quick enquiry ${ico.arrow}</button>
