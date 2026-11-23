@@ -120,7 +120,10 @@ const branches = [
       ['Do you have women trainers?', 'Yes. Our floor trainers are women, and they lead the strength, PCOS and thyroid programmes.'],
       ['Which areas do you serve?', 'Members travel to us from Malakpet, Dilsukhnagar, Santoshnagar, LB Nagar, Koti, Chaderghat, Moosarambagh, Amberpet and Saidabad.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties. Every programme is scaled to age, experience and medical history, and older members train with a trainer nearby on machines chosen for joints and balance.'],
-      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, diabetes, hypertension, menopause, bone health and post-partum programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
+      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, diabetes, hypertension, menopause, bone health and post-partum programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.'],
+      ["Is there a women's gym near Malakpet metro station?", 'Yes. Our Malakpet branch is a minute from Malakpet metro, opposite Pillar 1456 in the Zudio building. It is the easiest of our three branches to reach by metro.'],
+      ['Do you offer PCOS and thyroid programmes in Malakpet?', "Yes. Malakpet trainers run a high proportion of PCOS and thyroid programmes, built around your doctor's guidance with strength-first plans and sensible cardio."],
+      ['Can a complete beginner join the Malakpet branch?', 'Yes. Most members start with no gym experience. Your free trial includes a body assessment, and a female trainer stays with you on the floor while you learn the machines.']
     ]
   },
   {
@@ -189,7 +192,10 @@ const branches = [
       ['Do you have Pilates and sauna?', 'Yes. Pilates and core work are part of the class schedule, and sauna and steam are available as recovery facilities. Confirm current class timings with the branch.'],
       ['Which areas do you serve?', 'Members travel to us from Attapur, Mehdipatnam, Tolichowki, Rajendranagar, Langar Houz, Gudimalkapur, Hyderguda and Bandlaguda.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties. Programming is scaled to age, experience and medical history — older members train with a trainer nearby, on machines chosen for joints and balance.'],
-      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, diabetes, hypertension, menopause, bone health and post-partum programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
+      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, diabetes, hypertension, menopause, bone health and post-partum programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.'],
+      ['Where can I do EMS training near Attapur?', 'EMS is available at our Attapur branch only. It is a 20-minute low-impact session, useful if you are short on time or need a gentler start. Malakpet and Saidabad do not offer EMS.'],
+      ['Are there group classes at the Attapur branch?', 'Yes. Attapur has space for group classes including yoga, Zumba and aerobics. Check the weekly timetable with the branch when you book your trial.'],
+      ['Is Attapur convenient from Mehdipatnam and Tolichowki?', 'Yes. Members regularly travel from Mehdipatnam, Tolichowki, Rajendranagar and Langar Houz. The branch is opposite Pillar 151 on the first floor of Shree Bhagya Laxmi Plaza.']
     ]
   },
   {
@@ -259,7 +265,10 @@ const branches = [
       ['Do you run group classes at Saidabad?', 'No. Saidabad is a gym-only branch with no group classes on the floor. What you get is a quiet, well-equipped gym with female trainers, strength and cardio machines, personal training and one-to-one mobility work. If you want yoga, Pilates, Zumba or aerobics classes, our Malakpet and Attapur branches run those through the week.'],
       ['Which areas do you serve?', 'Members travel to us from Saidabad, Saroornagar, Dilsukhnagar, Madannapet, Champapet, Kothapet, Malakpet and Asmangadh.'],
       ['Do you train women of all ages?', 'Yes. Members range from women in their twenties to women in their sixties, and the branch is a particularly easy place for beginners. Every programme is scaled to age, experience and medical history.'],
-      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, post-partum, menopause and joint-friendly programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.']
+      ['Is the training clinically informed?', 'Yes — PCOS, thyroid, post-partum, menopause and joint-friendly programmes are built around the guidance you bring from your doctor or physiotherapist. We are trainers, not doctors, and we do not diagnose or treat conditions.'],
+      ['Is Saidabad a women-only gym?', 'Yes. The Saidabad floor is women-only, with female trainers and a private, comfortable setting above Ratnadeep Supermarket in Zahoor Bagh.'],
+      ['What equipment is on the Saidabad floor?', 'You will find strength machines, free weights, cardio equipment and space for mobility and one-to-one mobility work. Personal training is available if you want a trainer beside you.'],
+      ['Is EMS training available at Saidabad?', 'No. EMS training is offered at our Attapur branch only. Saidabad is a gym-only floor focused on strength, cardio and personal training.']
     ]
   }
 ];
