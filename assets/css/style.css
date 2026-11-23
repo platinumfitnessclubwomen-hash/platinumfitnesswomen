@@ -206,7 +206,7 @@ figure,blockquote{margin:0}
 }
 .header__numbers a{color:rgba(251,245,242,.8);white-space:nowrap;transition:color .3s}
 .header__numbers a span{
-  color:rgba(251,245,242,.45);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;margin-right:5px;
+  color:rgba(251,245,242,.62);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;margin-right:5px;
 }
 .header__numbers a:hover{color:#fff}
 .header__numbers a[href^="https://wa.me"]{color:var(--teal-bright)}

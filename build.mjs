@@ -64,8 +64,8 @@ const branches = [
       work: ['w-latpull', 'w-class1', 'w-incl', 'w-senior1'],
       gallery: ['w-trainer', 'w-class1', 'w-senior2']
     },
-    title: "Women's Gym in Malakpet, Hyderabad | Platinum Fitness Club Women Exclusive",
-    meta: 'Women-only gym in Malakpet, Hyderabad — 4.7 from 307 Google reviews and 500+ active members. Clinically informed training for every age: PCOS, thyroid, menopause, post-partum and joint-friendly. Free trial.',
+    title: "Women's Gym in Malakpet, Hyderabad | Platinum Fitness Club",
+    meta: 'Women-only gym in Malakpet, Hyderabad. 4.7 from 307 Google reviews, 500+ members. Clinical training, female trainers, free trial.',
     rating: '4.7',
     reviews: '307',
     members: '500+',
@@ -133,8 +133,8 @@ const branches = [
       work: ['w-lift', 'w-class2', 'w-group', 'w-trainer2'],
       gallery: ['w-class2', 'w-group', 'w-trainer2']
     },
-    title: "Women's Gym in Attapur, Hyderabad | Platinum Fitness Club Women Exclusive",
-    meta: 'Women-only gym in Attapur, Hyderabad — 4.9 from 666 Google reviews and 500+ active members. Clinically informed training for every age: PCOS, thyroid, menopause, post-partum and joint-friendly. Free trial.',
+    title: "Women's Gym in Attapur, Hyderabad | Platinum Fitness Club",
+    meta: 'Women-only gym in Attapur, Hyderabad. 4.9 from 666 Google reviews, 500+ members. EMS, Pilates, clinical training, free trial.',
     rating: '4.9',
     reviews: '666',
     members: '500+',
@@ -202,8 +202,8 @@ const branches = [
       work: ['w-weights', 'w-cardio', 'w-latpull', 'w-bike'],
       gallery: ['w-cardio', 'w-bike', 'w-incl']
     },
-    title: "Women's Gym in Saidabad, Hyderabad | Neo Platinum Fitness Club Women Exclusive",
-    meta: 'Women-only gym in Saidabad, Hyderabad — 5.0 from 40 Google reviews and 500+ active members. Gym-only floor with new equipment, personal training and female trainers. No group classes. Free trial & body assessment.',
+    title: "Women's Gym in Saidabad, Hyderabad | Neo Platinum Fitness",
+    meta: 'Women-only gym in Saidabad, Hyderabad. 5.0 from 40 Google reviews, 500+ members. Gym-only floor, female trainers, free trial.',
     rating: '5.0',
     reviews: '40',
     members: '500+',
@@ -574,6 +574,7 @@ function page(b) {
 <meta name="geo.placename" content="${b.locality}, Hyderabad">
 <meta name="geo.position" content="${b.geo.lat};${b.geo.lng}">
 <meta name="ICBM" content="${b.geo.lat}, ${b.geo.lng}">
+<link rel="preload" as="image" href="${b.img.hero}">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${BRAND}">
@@ -581,11 +582,15 @@ function page(b) {
 <meta property="og:description" content="${b.meta}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${BASE}/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${BRAND} — ${b.short}">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${b.title}">
 <meta name="twitter:description" content="${b.meta}">
 <meta name="twitter:image" content="${BASE}/assets/img/og.png">
+<meta name="twitter:image:alt" content="${BRAND} — ${b.short}">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -892,7 +897,7 @@ ${header(b)}
         ${b.quotes
           .map(
             (q, i) => `<article class="review" data-reveal data-reveal-delay="${i}">
-          <span class="review__stars" aria-label="${q.rating || 5} out of 5">${stars(q.rating || 5)}</span>
+          <span class="review__stars" role="img" aria-label="${q.rating || 5} out of 5">${stars(q.rating || 5)}</span>
           <blockquote class="review__quote">“${q.text}”</blockquote>
           <div class="review__foot">
             <div>
@@ -983,10 +988,10 @@ for (const b of branches) {
 /* ---------- sitemap ---------- */
 const today = new Date().toISOString().slice(0, 10);
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${[
-  { loc: `${BASE}/`, priority: '1.0', freq: 'monthly' },
-  ...branches.map((b) => ({ loc: `${BASE}/${b.slug}.html`, priority: '0.9', freq: 'monthly' }))
+  { loc: `${BASE}/`, priority: '1.0', freq: 'monthly', image: `${BASE}/assets/img/og.png`, imageTitle: 'Platinum Fitness Club Women Exclusive', imageCaption: 'Women-only gyms in Hyderabad' },
+  ...branches.map((b) => ({ loc: `${BASE}/${b.slug}.html`, priority: '0.9', freq: 'monthly', image: `${BASE}/${b.img.hero}`, imageTitle: `Women's gym in ${b.short}`, imageCaption: `Women training at the ${b.short} branch` }))
 ]
   .map(
     (u) => `  <url>
@@ -994,6 +999,11 @@ ${[
     <lastmod>${today}</lastmod>
     <changefreq>${u.freq}</changefreq>
     <priority>${u.priority}</priority>
+    <image:image>
+      <image:loc>${u.image}</image:loc>
+      <image:title>${u.imageTitle}</image:title>
+      <image:caption>${u.imageCaption}</image:caption>
+    </image:image>
   </url>`
   )
   .join('\n')}
